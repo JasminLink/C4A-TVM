@@ -98,6 +98,8 @@ window.name = "Default1";
         <asp:LinkButton runat="server" id="HyperLinkC" NavigateUrl="#" 
                     CssClass="button_eng_normal" 
                     onclick="btnAsynchPostback_Click">Week-End </asp:LinkButton>   
+        <asp:LinkButton runat="server" id="startButton" NavigateUrl="#" class="button_eng_normal"
+                    onclick="startButton_Click"><div style="padding-left: 30px; vertical-align:middle; ">Start</div></asp:LinkButton> 
         
         <asp:LinkButton runat="server" id="touristbutton" NavigateUrl="#" 
                     CssClass="button_hoch_normal_touristen" 

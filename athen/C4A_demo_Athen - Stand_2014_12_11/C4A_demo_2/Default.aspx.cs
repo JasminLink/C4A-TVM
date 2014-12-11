@@ -11,6 +11,15 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
 using System.Text;
+using Microsoft.PointOfService.Legacy;
+using Microsoft.PointOfService.Management;
+using Microsoft.PointOfService;
+using System.Threading;
+using System.Windows.Forms;
+using System.Reflection;
+using System.Drawing;
+using System.ComponentModel;
+using System.Windows.Threading;
 
 namespace C4A_demo_2
 {
@@ -83,6 +92,7 @@ namespace C4A_demo_2
             runjQueryCode("$('.button_hoch_normal').switchClass('button_hoch_normal','button_hoch_contrast','slow');");
             runjQueryCode("$('.button_hoch_normal_touristen').switchClass('button_hoch_normal_touristen','button_hoch_contrast_touristen','slow');");
             runjQueryCode("$('.area_header').switchClass('area_header','area_header_contrast','slow');");
+
         }
 
 
@@ -100,6 +110,56 @@ namespace C4A_demo_2
             runjQueryCode("$('.button_hoch_normal_touristen').switchClass('button_hoch_normal_touristen','button_hoch_contrast_touristen','slow');");
             
          }
+
+        protected void startButton_Click(object sender, EventArgs e)
+        {
+
+            // Die Auskommentierten Zeilen müssen hinzugefügt werden, falls der Scanner daueraft scannen soll(leider noch nicht funktionionsfähig) . Andernfalls scannt der Scanner einmalig beim Klicken auf den Button.
+            
+            //new Thread((ThreadStart)delegate()
+            //{
+               // for (int i = 0; i < 5; i++)
+               // {
+                    IDScanner scanner = new IDScanner();
+                    string Data = scanner.scan();
+
+                    //this.BeginInvoke((ThreadStart)delegate()
+                   // {
+                        if (Data.Contains("la"))
+                        {
+                            //startButton.Visible = false;
+                            this.runjQueryCode("$('.startseite_C4A').switchClass('startseite_C4A','startseite_C4A_contrast','slow');");
+                            this.runjQueryCode("$('.zeiticon').switchClass('zeiticon','zeiticon_contrast','slow');");
+                            this.runjQueryCode("$('.time').switchClass('time','time_contrast','slow');");
+                            this.runjQueryCode("$('.button_normal').switchClass('button_normal','button_contrast','slow');");
+                            this.runjQueryCode("$('.button_eng_normal_eservice').switchClass('button_eng_normal_eservice','button_eng_contrast_eservice','slow');");
+                            this.runjQueryCode("$('.button_eng_normal').switchClass('button_eng_normal','button_eng_contrast','slow');");
+                            this.runjQueryCode("$('.button_hoch_normal').switchClass('button_hoch_normal','button_hoch_contrast','slow');");
+                            this.runjQueryCode("$('.button_hoch_normal_touristen').switchClass('button_hoch_normal_touristen','button_hoch_contrast_touristen','slow');");
+                            this.runjQueryCode("$('.area_header').switchClass('area_header','area_header_contrast','slow');");
+                        }
+
+                        if (Data.Contains("lo"))
+                        {
+                            //startButton.Visible = false;
+                            this.runjQueryCode("$('.startseite_C4A_contrast').switchClass('startseite_C4A_contrast','startseite_C4A','slow');");
+                            this.runjQueryCode("$('.zeiticon_contrast').switchClass('zeiticon_contrast','zeiticon','slow');");
+                            this.runjQueryCode("$('.time_contrast').switchClass('time_contrast','time','slow');");
+                            this.runjQueryCode("$('.button_contrast').switchClass('button_contrast','button_normal','slow');");
+                            this.runjQueryCode("$('.button_eng_contrast_eservice').switchClass('button_eng_contrast_eservice','button_eng_normal_eservice','slow');");
+                            this.runjQueryCode("$('.button_eng_contrast').switchClass('button_eng_contrast','button_eng_normal','slow');");
+                            this.runjQueryCode("$('.button_hoch_contrast').switchClass('button_hoch_contrast','button_hoch_normal','slow');");
+                            this.runjQueryCode("$('.button_hoch_contrast_touristen').switchClass('button_hoch_contrast_touristen','button_hoch_normal_touristen','slow');");
+                            this.runjQueryCode("$('.area_header_contrast').switchClass('area_header_contrast','area_header','slow');");
+
+                        }
+
+
+                    //});
+               // }
+           // }).Start();
+
+        }
 
 
 
@@ -226,7 +286,7 @@ namespace C4A_demo_2
         protected void lang_button_fr_Click(object sender, EventArgs e)
         {
             Global.current_language = "fr";
-            applyLanguage(Global.current_language);   
+            applyLanguage(Global.current_language);
             lang_button_fr.CssClass = "language_button_fr_pressed";
             lang_button_en.CssClass = "language_button_en_normal";
             lang_button_de.CssClass = "language_button_de_normal";
