@@ -215,8 +215,44 @@ namespace ConsoleGET
         public string timeOut { get; set; } //default, long
         //[JsonProperty("name")]
         public string language { get; set; } //default (en), es, fr, it, de, he, ...
+    }
+
+
+    public class TVMUserListener
+    {
+        public String listenForUserToken()
+        {
+            //question web app or scanner
+            return "sammy";
+        }
 
 
     }
 
+    public class TVMPreferenceInvoker
+    {
+
+        public String getPreferencesFromServer()
+        {
+            //question web app or scanner
+            return "{\"de.fraunhofer.iao.C4A-TVM\":{\"contrastTheme\": \"yellow-black\", \"fontSize\": \"default\", \"fontFace\": \"default\", \"buttonSize\": \"default\", \"timeOut\": \"default\", \"language\": \"default\"}}";
+
+        }
+
+        public TVMPreferences applyPrefsToUi()
+        {
+            //question web app or scanner
+            TVMPreferences t = new TVMPreferences{
+                contrastTheme = "yellow-black",
+                fontSize = "big",
+                fontFace = "Comic Sans",
+                buttonSize = "big",
+                timeOut = "long",
+                language = "de"
+
+            };
+            return t;
+        }
+
+    }
 }
