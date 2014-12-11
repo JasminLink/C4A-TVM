@@ -1,0 +1,32 @@
+﻿body {
+    
+}
+
+
+
+.bigFontSize{
+    font-size: 40px;
+}
+
+.colorYellowBlack{
+    background: black;
+    color: yellow;
+}
+
+.bigButton{
+    width: 120px;
+    height: 60px;
+    font-size: 40px;
+    color: yellow;
+    background: grey;
+}
+
+.idleButton{
+
+}
+
+.idle{
+    font-size: 10px;
+    background: white;
+    color: black;
+}
