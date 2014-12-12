@@ -12,14 +12,7 @@ namespace Demo_GPII_Adapter
     class GPIIAdapter
     {
 
-        public static TVMSettings listenForUsers(String flowManager)
-        {
-            String userToken = "logout";
 
-            TVMSettings tvmSettings = getPreferences(userToken, flowManager);
-
-            return tvmSettings;
-        }
 
         public static String getPreferencesJSON(String userToken, String url_to_flowmanager)
         {
