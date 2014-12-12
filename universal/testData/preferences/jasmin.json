@@ -1,10 +1,10 @@
 {
-    "de.fraunhofer.iao.C4A-TVM": [
-        {
-            "value": {
-                "buttonSize": "big",
-                "language": "fr"
-            }
+ 	"http://registry.gpii.org/applications/de.fraunhofer.iao.C4A-TVM": [{
+        "value": {
+            "buttonSize": "big",
+			"language": "fr"
+			
         }
-    ]
+    }]
+
 }

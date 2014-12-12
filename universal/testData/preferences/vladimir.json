@@ -1,10 +1,23 @@
 {
-    "de.fraunhofer.iao.C4A-TVM": [
-        {
-            "value": {
-                "contrastTheme": "yellow-black",
-                "fontSize": "big"
-            }
+    "http://registry.gpii.org/common/fontSize": [{ "value": 24 }],
+    "http://registry.gpii.org/common/foregroundColor": [{"value": "white"}],
+    "http://registry.gpii.org/common/backgroundColor": [{"value": "black"}],
+    "http://registry.gpii.org/common/fontFaceFontName": [{"value": ["Comic Sans"]}],
+    "http://registry.gpii.org/common/fontFaceGenericFontFace": [{"value": "sans serif"}],
+    "http://registry.gpii.org/common/magnification": [{"value": 3.0}],
+    "http://registry.gpii.org/common/tracking": [{"value": ["mouse"]}],
+    "http://registry.gpii.org/common/invertColours": [{"value": true}],
+    "http://registry.gpii.org/common/highContrast": [{"value": false}],
+	"http://registry.gpii.org/common/language": [{ "value": "de" }]
+	,
+	"http://registry.gpii.org/applications/de.fraunhofer.iao.C4A-TVM": [{
+        "value": {
+            "contrastTheme": "yellow-black",
+			"fontSize": "big",
+			"fontFace": "Comic Sans",
+			"language": "de"
+			
         }
-    ]
+    }]
+	
 }
