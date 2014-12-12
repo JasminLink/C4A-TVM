@@ -7,6 +7,14 @@ vladimir middle font, yellow-black
 
    write transformation for this:::  "http://registry.gpii.org/common/invertColours": [{"value": true}] --to yellow black
    
+   "contrastTheme": {
+    "transform": {
+        "type": "fluid.transforms.condition",
+        "conditionPath":  "display.screenEnhancement.-provisional-highContrastEnabled",
+        "true": "yellow-black",
+        "false": "default"
+    }
+}
    
 Users mentioned in D305.1
 

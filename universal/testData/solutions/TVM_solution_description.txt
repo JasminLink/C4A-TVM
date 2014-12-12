@@ -38,7 +38,7 @@ to support common term inverted, add
 					"highContrastEnabled":"display.screenEnhancement.-provisional-highContrastEnabled",
                     "highContrastTheme":"display.screenEnhancement.-provisional-highContrastTheme",
                     "invertColours":"display.screenEnhancement.-provisional-invertColours",
-                    "theme": {
+                    "contrastTheme": {
                         "transform": {
                             "type": "fluid.transforms.valueMapper",
                             "inputPath": "display.screenEnhancement.-provisional-highContrastTheme",
@@ -55,7 +55,7 @@ to support common term inverted, add
 							"transform": {
 								"type": "fluid.transforms.condition",
 								"conditionPath":  "display.screenEnhancement.-provisional-highContrastEnabled",
-								"true": "theme.yellow-black"
+								"true": "contrastTheme.yellow-black"
 							}
                         }
                     }

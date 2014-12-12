@@ -1,0 +1,37 @@
+
+    {
+        "name": "C4A-TVM",
+        "id": "de.fraunhofer.iao.C4A-TVM",
+        "contexts": {
+		            "OS": [
+                {
+                    "id": "web"
+                }
+            ]
+        }
+		,
+        "settingsHandlers": [
+            {
+                "type": "gpii.settingsHandlers.noSettings",
+                "capabilities": [
+                    "applications.de\\.fraunhofer\\.iao\\.C4A-TVM.id",
+                    "applications.de\\.fraunhofer\\.iao\\.C4A-TVM.name"
+                ]
+				,
+                "capabilitiesTransformations": {
+                    
+					"contrastTheme": {
+							"transform": {
+							"type": "fluid.transforms.condition",
+							"conditionPath":  "display.screenEnhancement.-provisional-highContrastEnabled",
+							"true": "yellow-black",
+							"false": "default"
+						}
+					}
+
+				}
+			}
+		]
+	}
+	,
+	

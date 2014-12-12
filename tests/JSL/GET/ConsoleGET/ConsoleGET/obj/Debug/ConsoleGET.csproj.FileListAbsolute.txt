@@ -16,3 +16,5 @@ C:\GPII_GitHub\C4A-TVM\tests\JSL\GET\ConsoleGET\ConsoleGET\bin\Debug\Newtonsoft.
 C:\GPII_GitHub\C4A-TVM\tests\JSL\GET\ConsoleGET\ConsoleGET\obj\Debug\ConsoleGET.csprojResolveAssemblyReference.cache
 C:\GPII_GitHub\C4A-TVM\tests\JSL\GET\ConsoleGET\ConsoleGET\obj\Debug\ConsoleGET.exe
 C:\GPII_GitHub\C4A-TVM\tests\JSL\GET\ConsoleGET\ConsoleGET\obj\Debug\ConsoleGET.pdb
+C:\GPII_GitHub\C4A-TVM\tests\JSL\GET\ConsoleGET\ConsoleGET\bin\Debug\log4net.dll
+C:\GPII_GitHub\C4A-TVM\tests\JSL\GET\ConsoleGET\ConsoleGET\bin\Debug\log4net.xml
