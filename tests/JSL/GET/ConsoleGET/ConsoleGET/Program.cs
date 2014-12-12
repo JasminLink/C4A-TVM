@@ -48,7 +48,7 @@ namespace ConsoleGET
             TVMSettings t1 = JsonConvert.DeserializeObject<TVMSettings>(x);
             printTVMSettings(t1);
 
-            readJSON();
+            
 
             Console.ReadLine();
             

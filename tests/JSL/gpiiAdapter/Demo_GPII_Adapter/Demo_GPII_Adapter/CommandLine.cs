@@ -15,8 +15,12 @@ namespace Demo_GPII_Adapter
 
             for (int i = 0; i < userTokens.Length; i++)
             {
-                 Console.WriteLine(GPIIAdapter.getPreferencesJSON(userTokens[i], flowManager));
+                 //Console.WriteLine(GPIIAdapter.getPreferencesJSON(userTokens[i], flowManager));
+                GPIIAdapter.listenForUsers(flowManager);
+
             }
+
+            
              
 
             Console.Read();
