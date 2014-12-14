@@ -15,11 +15,12 @@ using Microsoft.PointOfService.Legacy;
 using Microsoft.PointOfService.Management;
 using Microsoft.PointOfService;
 using System.Threading;
-using System.Windows.Forms;
+
 using System.Reflection;
 using System.Drawing;
 using System.ComponentModel;
-using System.Windows.Threading;
+
+
 
 namespace C4A_demo_2
 {
