@@ -1,9 +1,3 @@
-hallo
-
-
-
-
-
 
 ACCEPTANCE TESTS
 
@@ -12,3 +6,16 @@ Of course, there comes the question if other people can run the tests without ha
 
 Best regards,
 Otilia
+
+-> Acceptance Tests written by Christophe
+
+add Christophe, Javi, Gianna, Ottilia and Kasper to Deliverable. 
+
+To FIX
+
+switching to French, first flag turns to French too, instead of german disabled. 
+
+Ticket Printing...
+
+decouple language and contrastTheme
+

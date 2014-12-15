@@ -1,0 +1,60 @@
+  wenn eigenes bmp benutzt: 
+
+
+System.Runtime.InteropServices.ExternalException wurde nicht von Benutzercode behandelt.
+  HResult=-2147467259
+  Message=Allgemeiner Fehler in GDI+.
+  Source=System.Drawing
+  ErrorCode=-2147467259
+  StackTrace:
+       bei System.Drawing.Image.Save(String filename, ImageCodecInfo encoder, EncoderParameters encoderParams)
+       bei System.Drawing.Image.Save(String filename, ImageFormat format)
+       bei Printer.printTicket(Bitmap ticket) in c:\GPII-github\C4A-TVM\athen\C4A_demo_Athen - Stand_2014_12_15\C4A_demo_2\Printer.cs:Zeile 39.
+       bei C4A_demo_2.payment.navigate_ahead_Click(Object sender, EventArgs e) in c:\GPII-github\C4A-TVM\athen\C4A_demo_Athen - Stand_2014_12_15\C4A_demo_2\payment.aspx.cs:Zeile 38.
+       bei System.Web.UI.WebControls.LinkButton.OnClick(EventArgs e)
+       bei System.Web.UI.WebControls.LinkButton.RaisePostBackEvent(String eventArgument)
+       bei System.Web.UI.WebControls.LinkButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+       bei System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+       bei System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+       bei System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+  InnerException: 
+
+  
+  System.Runtime.InteropServices.ExternalException wurde nicht von Benutzercode behandelt.
+  HResult=-2147467259
+  Message=Allgemeiner Fehler in GDI+.
+  Source=System.Drawing
+  ErrorCode=-2147467259
+  StackTrace:
+       bei System.Drawing.Image.Save(String filename, ImageCodecInfo encoder, EncoderParameters encoderParams)
+       bei System.Drawing.Image.Save(String filename, ImageFormat format)
+       bei Printer.printTicket(Bitmap ticket) in c:\GPII-github\C4A-TVM\athen\C4A_demo_Athen - Stand_2014_12_15\C4A_demo_2\Printer.cs:Zeile 39.
+       bei C4A_demo_2.payment.navigate_ahead_Click(Object sender, EventArgs e) in c:\GPII-github\C4A-TVM\athen\C4A_demo_Athen - Stand_2014_12_15\C4A_demo_2\payment.aspx.cs:Zeile 38.
+       bei System.Web.UI.WebControls.LinkButton.OnClick(EventArgs e)
+       bei System.Web.UI.WebControls.LinkButton.RaisePostBackEvent(String eventArgument)
+       bei System.Web.UI.WebControls.LinkButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+       bei System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+       bei System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+       bei System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+  InnerException: 
+
+  
+  Microsoft.PointOfService.PosControlException wurde nicht von Benutzercode behandelt.
+  HResult=-2146233088
+  Message=No paper in selected slot.
+  Source=Microsoft.PointOfService.ControlBase
+  ErrorCodeExtended=203
+  StackTrace:
+       bei Microsoft.PointOfService.BaseServiceObjects.PosPrinterBase.OutputRequestHandler(OutputRequest Request)
+       bei Microsoft.PointOfService.Internal.PosCommonInternal.ProcessOutputRequest(OutputRequest request, Boolean asyncOperation)
+       bei Microsoft.PointOfService.BaseServiceObjects.PosPrinterBase.ProcessRequest(PrintOperation operation)
+       bei Microsoft.PointOfService.BaseServiceObjects.PosPrinterBase.PrintBitmap(PrinterStation station, String fileName, Int32 width, Int32 alignment)
+       bei Printer.printTicket(Bitmap ticket) in c:\GPII-github\C4A-TVM\athen\C4A_demo_Athen - Stand_2014_12_15\C4A_demo_2\Printer.cs:Zeile 41.
+       bei C4A_demo_2.payment.navigate_ahead_Click(Object sender, EventArgs e) in c:\GPII-github\C4A-TVM\athen\C4A_demo_Athen - Stand_2014_12_15\C4A_demo_2\payment.aspx.cs:Zeile 38.
+       bei System.Web.UI.WebControls.LinkButton.OnClick(EventArgs e)
+       bei System.Web.UI.WebControls.LinkButton.RaisePostBackEvent(String eventArgument)
+       bei System.Web.UI.WebControls.LinkButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+       bei System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+       bei System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+       bei System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+  InnerException: 
