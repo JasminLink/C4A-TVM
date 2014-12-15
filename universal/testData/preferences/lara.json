@@ -1,9 +1,0 @@
-{
-	"http://registry.gpii.org/applications/de.fraunhofer.iao.C4A-TVM": [{
-        "value": {
-			"language": "he",
-			"timeOut": "long"
-			
-        }
-    }]
-}
