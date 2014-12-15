@@ -17,12 +17,12 @@
 </head>
 <body onload="window.setTimeout('ZeitAnzeigen(\'fr\')', 1000)">
 <form id="form2" runat="server">
-<div id="display" class="payment_C4A">
+<div id="display" runat="server" class="payment_C4A">
 
     <div id="headline">
     	<div id="headcontainer">
-			<div class="zeiticon"></div> 
-			<div id="Uhr" class="time">&nbsp;</div>
+			<div id="zeiticon" runat="server" class="zeiticon"></div> 
+			<div id="Uhr" class="time" runat="server">&nbsp;</div>
 
             <div id="statuszeile" runat="server" style="font-size: 9px" visible="false">&nbsp;</div>
     	</div>
@@ -52,29 +52,27 @@
         
         <br/><br/><br/><br/>
         <br/><br/><br/><br/>
-        <div style="text-align:right;"><asp:Label runat="server" ID="total_price_label"></asp:Label></div>     
+        <div id="amount_label" runat="server" style="text-align:right;"><asp:Label runat="server" ID="total_price_label"></asp:Label></div>     
         <div style="text-align:right;"><asp:Label runat="server" ID="total_price"></asp:Label></div><div style="text-align:right; font-size:40px; padding-top:20px;"></div>
-        <div style="text-align:right; font-size:40px; padding-top:20px;"><asp:Label runat="server" ID="price"></asp:Label></div>
+        <div id="amount" runat="server" style="text-align:right; font-size:40px; padding-top:20px;"><asp:Label runat="server" ID="price"></asp:Label></div>
       </div>
     </div>
-
-
 
     
     <div id="footer">
     
     
-    <a href="Default.aspx" class="button_eng_normal"><asp:Label runat="server" ID="cancel_label"></asp:Label></a>
-    
+     <asp:HyperLink ID="ccl" runat="server" CssClass="button_eng_normal" NavigateUrl="Default.aspx"><asp:Label runat="server" ID="cancel_label"></asp:Label></asp:HyperLink>
+        
      <asp:Label runat="server" ID="yourticketheadline" CssClass="time" style="position:absolute; left:733px; top:-505px"></asp:Label>
      <asp:Label runat="server" ID="to_label" style="position:absolute; left:741px; top:-460px; color:#777777" >Nach</asp:Label>
     	
-   	<asp:LinkButton runat="server" id="navigate_back" NavigateUrl="#" 
-            CssClass="button_eng_normal" style="position:absolute; left:404px" 
-            onclick="navigate_back_Click">zurück</asp:LinkButton>
    	<asp:LinkButton runat="server" id="navigate_ahead" NavigateUrl="#" 
+            CssClass="button_eng_normal" style="position:absolute; left:404px" 
+            onclick="navigate_ahead_Click">zurück</asp:LinkButton>
+   	<asp:LinkButton runat="server" id="navigate_back" NavigateUrl="#" 
             CssClass="button_eng_normal" style="position:absolute; left:548px" 
-            onclick="navigate_ahead_Click">Ticket</asp:LinkButton>
+            onclick="navigate_back_Click">vor</asp:LinkButton>
    		
 
     <!--<a href="#" class="button-size-two button-stylegreen button-text buttonpadding floatright"><div id="buttonfeld">Bezahlen</div></a>-->

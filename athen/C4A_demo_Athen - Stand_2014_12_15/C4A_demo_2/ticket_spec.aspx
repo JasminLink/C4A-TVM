@@ -32,12 +32,13 @@
 <body onload="window.setTimeout('ZeitAnzeigen(\'fr\')', 1000)">
 <form id="form2" runat="server">
 <asp:ScriptManager ID="sm" runat="server" EnablePartialRendering="true"></asp:ScriptManager>
-<div id="display" class="stepbystep_C4A">
+
+<div id="display" runat="server" class="stepbystep_C4A">
 
     <div id="headline">
     	<div id="headcontainer">
-			<div class="zeiticon"></div> 
-			<div id="Uhr" class="time">&nbsp;</div>
+			<div id="zeiticon" runat="server" class="zeiticon"></div> 
+			<div id="Uhr" class="time" runat="server">&nbsp;</div>
 
             <div id="statuszeile" runat="server" style="font-size: 9px" visible="false">&nbsp;</div>
     	</div>
@@ -95,10 +96,11 @@
     <div id="footer">
     
     
-    <a href="Default.aspx" class="button_eng_normal"><div id="buttonfeld"><asp:Label runat="server" ID="cancel_label"></asp:Label></div></a>
+    <asp:HyperLink ID="ccl" runat="server" CssClass="button_eng_normal" NavigateUrl="Default.aspx"><asp:Label runat="server" ID="cancel_label"></asp:Label></asp:HyperLink>
+
     
     <asp:Label runat="server" ID="yourticketheadline" CssClass="time" style="position:absolute; left:733px; top:-505px"></asp:Label>
-     <asp:Label runat="server" ID="to_label" style="position:absolute; left:741px; top:-460px; color:#777777" ></asp:Label>
+    <asp:Label runat="server" ID="to_label" style="position:absolute; left:741px; top:-460px; color:#777777" ></asp:Label>
    	
    	<asp:LinkButton runat="server" id="navigate_ahead" NavigateUrl="#" 
             CssClass="button_eng_normal" style="position:absolute; left:404px" 
@@ -111,8 +113,9 @@
     <!--<a href="#" class="button-size-two button-stylegreen button-text buttonpadding floatright"><div id="buttonfeld">Bezahlen</div></a>-->
     </div>
     
+   </div>
    </form> 
-<div id="my_popup">
+    <div id="my_popup">
     Das ist das Overlay!
 
     <!-- Add an optional button to close the popup -->

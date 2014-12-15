@@ -17,6 +17,53 @@ namespace C4A_demo_2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            if (Global.current_theme.Contains("contrast"))
+            {
+                display.Attributes["class"] = "stepbystep_C4A_contrast";
+                normaltarif_button.CssClass = "button_contrast";
+                kindertarif_button.CssClass = "button_contrast";
+                yourticketheadline.CssClass = "time_contrast";
+                choice.CssClass = "time_contrast";
+                Uhr.Attributes["class"] = "time_contrast";
+
+                zeiticon.Attributes["class"] = "zeiticon_contrast";
+
+
+                ccl.CssClass = "button_eng_contrast";
+                navigate_ahead.CssClass = "button_eng_contrast";
+                navigate_back.CssClass = "button_eng_contrast";
+
+                navigate_back.Attributes["style"] = "position:absolute; left:394px";
+                navigate_ahead.Attributes["style"] = "position:absolute; left:558px";
+
+            }
+
+            if (Global.current_theme.Contains("normal"))
+            {
+                display.Attributes["class"] = "stepbystep_C4A";
+                normaltarif_button.CssClass = "button_normal";
+                kindertarif_button.CssClass = "button_normal";
+
+
+                yourticketheadline.CssClass = "time";
+                choice.CssClass = "time";
+                Uhr.Attributes["class"] = "time";
+
+                zeiticon.Attributes["class"] = "zeiticon";
+
+
+                ccl.CssClass = "button_eng_normal";
+                navigate_ahead.CssClass = "button_eng_normal";
+                navigate_back.CssClass = "button_eng_normal";
+
+                navigate_back.Attributes["style"] = "position:absolute; left:404px";
+                navigate_ahead.Attributes["style"] = "position:absolute; left:548px";
+
+            }
+            
+            
+            
             yourticketheadline.Text = Global.wordingtable[15];
             to_label.Text = Global.wordingtable[16];
             ticket_dest.Text = Global.ticket.destination;
@@ -26,7 +73,7 @@ namespace C4A_demo_2
             kindertarif.Text = Global.wordingtable[20];
             red_text.Text = Global.wordingtable[18];
             none_text.Text = Global.wordingtable[22];
-            cancelbutton.Text = Global.wordingtable[13];
+            cancel_label.Text = Global.wordingtable[13];
         }
 
         protected void navigate_ahead_Click(object sender, EventArgs e)

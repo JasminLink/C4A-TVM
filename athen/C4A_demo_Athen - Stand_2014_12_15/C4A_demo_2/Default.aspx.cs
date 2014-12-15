@@ -66,6 +66,7 @@ namespace C4A_demo_2
 
         protected void btnAsynchPostback_Click(object sender, EventArgs e)
         {
+            Global.current_theme = "contrast";
             // runjQueryCode("$('.button_contrast').switchClass('button_contrast','button_crazy','slow');$('.button_crazy').switchClass('button_crazy','button_contrast','fast');");
             runjQueryCode("$('.startseite_C4A').switchClass('startseite_C4A','startseite_C4A_contrast','slow');");
             runjQueryCode("$('.time').switchClass('time','time_contrast','slow');");
@@ -82,6 +83,7 @@ namespace C4A_demo_2
 
         protected void HyperLinkB_Click(object sender, EventArgs e)
         {
+            Global.current_theme = "contrast";
             // runjQueryCode("$('.button_contrast').switchClass('button_contrast','button_crazy','slow');$('.button_crazy').switchClass('button_crazy','button_contrast','fast');");
             runjQueryCode("$('.startseite_C4A').switchClass('startseite_C4A','startseite_C4A_contrast','slow');");
             runjQueryCode("$('.zeiticon').switchClass('zeiticon','zeiticon_contrast','slow');");
@@ -98,6 +100,7 @@ namespace C4A_demo_2
 
         protected void HyperLinkC_Click(object sender, EventArgs e)
         {
+            Global.current_theme = "contrast";
             // runjQueryCode("$('.button_contrast').switchClass('button_contrast','button_crazy','slow');$('.button_crazy').switchClass('button_crazy','button_contrast','fast');");
             runjQueryCode("$('.startseite_C4A').switchClass('startseite_C4A','startseite_C4A_contrast','slow');");
             runjQueryCode("$('.area_header').switchClass('area_header','area_header_contrast','slow');");
@@ -116,8 +119,8 @@ namespace C4A_demo_2
 
             //IDScanner scanner = new IDScanner();
             //startButton.Text = "\"" + scanner.scan() + "\"";
-            
-            String flowManager = TVMSettings.url_to_emulated_FlowManager;
+
+            String flowManager = TVMSettings.url_to_local_cloudbased_FlowManager;
             TVMSettings ts = UPOSAdapter.listenForUsers(flowManager);
             //TVMSettings ts = GPIIAdapter.getPreferences("jasmin", flowManager);
             freq_3_button.Text = "\"" + ts.TVMPreferences.userToken + " " + ts.TVMPreferences.contrastTheme + " " + ts.TVMPreferences.language + "\"";
@@ -132,6 +135,7 @@ namespace C4A_demo_2
 
                     //this.BeginInvoke((ThreadStart)delegate()
                    // {
+            
             if (ts.TVMPreferences.contrastTheme == "yellow-black")
                         {
                             //startButton.Visible = false;

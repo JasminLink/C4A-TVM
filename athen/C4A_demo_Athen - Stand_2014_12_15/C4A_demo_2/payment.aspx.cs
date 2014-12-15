@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Configuration;
 using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Web;
 using System.Web.Security;
@@ -18,6 +17,49 @@ namespace C4A_demo_2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            if (Global.current_theme.Contains("contrast"))
+            {
+                display.Attributes["class"] = "payment_C4A_contrast";
+
+                yourticketheadline.CssClass = "time_contrast";
+                choice.CssClass = "time_contrast";
+                Uhr.Attributes["class"] = "time_contrast";
+
+                zeiticon.Attributes["class"] = "zeiticon_contrast";
+                amount.Attributes["style"] = "color:Yellow; text-align:right; font-size:40px; padding-top:20px;";
+                amount_label.Attributes["style"] = "color:Yellow; text-align:right; ";
+
+                ccl.CssClass = "button_eng_contrast";
+                navigate_ahead.CssClass = "button_eng_contrast";
+                navigate_back.CssClass = "button_eng_contrast";
+
+                navigate_back.Attributes["style"] = "position:absolute; left:394px";
+                navigate_ahead.Attributes["style"] = "position:absolute; left:558px";
+
+            }
+
+            if (Global.current_theme.Contains("normal"))
+            {
+                display.Attributes["class"] = "payment_C4A";
+
+
+                yourticketheadline.CssClass = "time";
+                choice.CssClass = "time";
+                Uhr.Attributes["class"] = "time";
+
+                zeiticon.Attributes["class"] = "zeiticon";
+
+
+                ccl.CssClass = "button_eng_normal";
+                navigate_ahead.CssClass = "button_eng_normal";
+                navigate_back.CssClass = "button_eng_normal";
+
+                navigate_back.Attributes["style"] = "position:absolute; left:404px";
+                navigate_ahead.Attributes["style"] = "position:absolute; left:548px";
+
+            }
+            
             cancel_label.Text = Global.wordingtable[13];
             ticket_tarif.Text = Global.ticket.tarif;
             to_label.Text = Global.wordingtable[16];
@@ -32,10 +74,7 @@ namespace C4A_demo_2
 
         protected void navigate_ahead_Click(object sender, EventArgs e)
         {
-            // hier wird gedruckt
-            Printer printer = new Printer();
-            Bitmap druckticket = Printer.generateTicket(Global.ticket.type, "", Global.ticket.destination, Global.ticket.price.ToString(), "", Global.ticket.tarif);
-            printer.printTicket(druckticket);
+
         }
 
         protected void navigate_back_Click(object sender, EventArgs e)

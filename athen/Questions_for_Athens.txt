@@ -15,7 +15,10 @@ To FIX
 
 switching to French, first flag turns to French too, instead of german disabled. 
 
-Ticket Printing...
+Ticket Printing... 
+- print with parameters
+- add page: ticket is being printed
+- use UPOS Adapter
 
 decouple language and contrastTheme
 

@@ -11,6 +11,7 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
 using System.Text;
+using System.Drawing.Text;
 
 namespace C4A_demo_2
 {
@@ -19,9 +20,51 @@ namespace C4A_demo_2
         protected void Page_Load(object sender, EventArgs e)
         {
             
-
             Global.fillWordingTable(Global.current_language);
+            
+            if (Global.current_theme.Contains("contrast"))
+            {
+                display.Attributes["class"] = "stepbystep_C4A_contrast";
+                single_button.CssClass = "button_contrast";
+                day_button.CssClass = "button_contrast";
+                carnet_button.CssClass = "button_contrast";
+                yourticketheadline.CssClass = "time_contrast";
+                choice.CssClass = "time_contrast";
+                Uhr.Attributes["class"] = "time_contrast";
+                
+                zeiticon.Attributes["class"] = "zeiticon_contrast";
+                
 
+                ccl.CssClass = "button_eng_contrast";
+                navigate_ahead.CssClass = "button_eng_contrast";
+                navigate_back.CssClass = "button_eng_contrast";
+
+                navigate_back.Attributes["style"] = "position:absolute; left:394px";
+                navigate_ahead.Attributes["style"] = "position:absolute; left:558px";
+                
+            }
+
+            if (Global.current_theme.Contains("normal"))
+            {
+                display.Attributes["class"] = "stepbystep_C4A";
+                single_button.CssClass = "button_normal";
+                day_button.CssClass = "button_normal";
+                carnet_button.CssClass = "button_normal";
+                yourticketheadline.CssClass = "time";
+                choice.CssClass = "time";
+                Uhr.Attributes["class"] = "time";
+
+                zeiticon.Attributes["class"] = "zeiticon";
+
+
+                ccl.CssClass = "button_eng_normal";
+                navigate_ahead.CssClass = "button_eng_normal";
+                navigate_back.CssClass = "button_eng_normal";
+
+                navigate_back.Attributes["style"] = "position:absolute; left:404px";
+                navigate_ahead.Attributes["style"] = "position:absolute; left:548px";
+
+            }
 
             ticket_dest.Text = Global.ticket.destination;
             choice.Text = Global.wordingtable[14];

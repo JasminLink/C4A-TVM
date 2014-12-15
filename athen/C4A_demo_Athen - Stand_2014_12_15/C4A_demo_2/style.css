@@ -477,9 +477,24 @@ h1 {
     background-repeat: no-repeat;
   }
   
+  .stepbystep_C4A_contrast {
+    background-image: url(../img/stepbystep_C4A_contrast.png);
+    width: 1024px;
+    height:768px;
+    background-repeat: no-repeat;
+  }
+  
 
 .payment_C4A {
     background-image: url(../img/payment_C4A_2.png);
+    width: 1024px;
+    height:768px;
+    background-repeat: no-repeat;
+  }
+  
+ 
+.payment_C4A_contrast {
+    background-image: url(../img/payment_C4A_contrast.png);
     width: 1024px;
     height:768px;
     background-repeat: no-repeat;
