@@ -34,15 +34,14 @@ public class Printer
         printer.Claim(1000);
         printer.DeviceEnabled = true;
 
-        //string ticketPathFile = "tix.bmp";
-        //string ticketPathFile = "C:\\Temp\\ticket.bmp";
-        string ticketPathFile = "C:\\Cloud4All\\GITRepository\\TestWebsite\\Ticket.bmp";
-        //ticket.Save(ticketPathFile, System.Drawing.Imaging.ImageFormat.Bmp);
-        printer.PrintBitmap(PrinterStation.Receipt, ticketPathFile, PosPrinter.PrinterBitmapAsIs, PosPrinter.PrinterBitmapCenter);
-        // wirft POSControll Exception In Microsoft.PointOfService.PosControlException ist eine Ausnahme vom Typ "Microsoft.PointOfService.ControlBase.dll" aufgetreten, doch wurde diese im Benutzercode nicht verarbeitet.
-        //printer.PrintMemoryBitmap(PrinterStation.Receipt, ticket, PosPrinter.PrinterBitmapAsIs, PosPrinter.PrinterBitmapCenter);
-
-        //printer.PrintNormal(PrinterStation.Receipt, "Ticket");
+        using (System.IO.MemoryStream ms = new MemoryStream())
+        {
+            ticket.Save(ms, System.Drawing.Imaging.ImageFormat.Bmp);
+            using (System.Drawing.Bitmap bmp = (System.Drawing.Bitmap)System.Drawing.Bitmap.FromStream(ms))
+            {
+                printer.PrintMemoryBitmap(PrinterStation.Receipt, bmp, PosPrinter.PrinterBitmapAsIs, PosPrinter.PrinterBitmapCenter);
+            }
+        }
 
         System.Threading.Thread.Sleep(8000);
         Console.WriteLine("sleeping");
