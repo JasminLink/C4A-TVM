@@ -1,0 +1,65 @@
+﻿body
+{
+ .button_normal {
+   display: -moz-inline-stack;
+   display: inline-block;
+   width: 200px;
+   height: 50px;
+   background: url("./img/button_normal.png") no-repeat;
+   line-height: 50px;
+   vertical-align: text-middle;
+   text-align: center;
+   color: #383338;
+   font-family: Calibri;
+   font-size: 24px;
+   font-weight: normal;
+   font-style: normal;
+   text-shadow: none;
+}
+a.button > span {
+   display: -moz-inline-block;
+}
+
+a.button_contrast {
+   display: -moz-inline-stack;
+   display: inline-block;
+   width: 220px;
+   height: 55px;
+   background: url("http://dabuttonfactory.com/b.png?t=Das%20ist%20ein%20langer%20&f=sans-serif-Bold&ts=24&tc=fbff0800&it=png&c=5&bgt=gradient&bgc=686b6e&ebgc=000103&shs=1&shc=222&sho=se&w=220&h=55") no-repeat;
+   line-height: 55px;
+   vertical-align: text-middle;
+   text-align: center;
+   color: #fbff08;
+   font-family: sans-serif;
+   font-size: 24px;
+   font-weight: bold;
+   font-style: normal;
+   text-shadow: none;
+}
+a.button_contrast > span {
+   display: -moz-inline-block;
+}
+
+a.button_crazy {
+   display: -moz-inline-stack;
+   display: inline-block;
+   width: 200px;
+   height: 50px;
+   background: url("http://dabuttonfactory.com/b.png?t=Das%20ist%20ein%20langer%20&f=Komika&ts=20&tc=0affef00&tshs=4&tshc=9d3dd100&it=png&c=5&bgt=gradient&bgc=f06eaf&ebgc=c24d29&shs=1&shc=222&sho=se&w=200&h=50") no-repeat;
+   line-height: 50px;
+   vertical-align: text-middle;
+   text-align: center;
+   color: #0affef;
+   font-family: Komika;
+   font-size: 20px;
+   font-weight: normal;
+   font-style: normal;
+   text-shadow: #9d3dd1 4px 4px 0;
+}
+a.button_crazy > span {
+   display: -moz-inline-block;
+}
+
+
+
+}
