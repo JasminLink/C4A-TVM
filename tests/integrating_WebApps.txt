@@ -1,0 +1,20 @@
+integration a web application to the GPII 
+
+web applications, in terms of the GPII also called web based solutions are not dependet on a specific os, but running in a browser. it depends on the design of the web application, where the functionality of querying the needs and preferences sits, this may be for example on the web server running the appilcation, in case of the TVM, this is C# classes behind ASPX pages. 
+
+another question is how to identify the user, this may be by typing a token, or in case of the TVM by scanning a bar code. 
+
+somewhere it must be declared what configurations are possible with your web application. this happens in the solution registry, in the web part, which is basically a JSON file containing entries for each application or, in GPII term solution, the GPII knows about. The capabilities of a solutions may be expressend in application specific terms, which is probably the case, when you already have a configurable application. The second possibility to express the capabilities is in common terms, which describe settings that may be of use in different applications like font size or reading speed. Also mappings from one to the other can be defined. This all is done in the entry in the solution registry. 
+ 
+for your application to use this, all that is needed is an instance of the GPII part of a FlowManager which has this solution entry, and which has needs and preferences set, using these capabilities. For testing this yourself, it is necessary to install a local version of the GPII part called the FlowManager on your computer. Most probable you will want to process the settings in your web application internally, which is different from how applications that run locally are handled by the GPII. On a desktop pc setting when a user logs in, an applications' current settings would be archived, the settings invoker would replace them by the settings for the user token, and would start the application with these settings. When logging the user out, the application would be stopped, and the initial settings would be put back. Web applications tend not to be restarted, but to be reloaded, that's why a settings invoker that writes settings to a file or to the registry will not be necessary, it would be enough to use the FlowManager function retrieve settings.
+https://github.com/GPII/universal/blob/master/documentation/FlowManager.md
+
+
+To do this, you can follow the first two steps at the simple installation instructions. 
+As a developer of or integrator of your web application, you will not have to make changes to the source code of the GPII itself. For those who want it, or have a look at the internals of the GPII,  this is described in the developers' version of installation directions: http://wiki.gpii.net/w/Setting_Up_Your_Development_Environment.
+
+
+http://wiki.gpii.net/w/Flow_Manager 
+ 
+ 
+for the GPII internal Match Maker to map 
