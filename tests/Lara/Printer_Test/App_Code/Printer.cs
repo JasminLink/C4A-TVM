@@ -61,6 +61,7 @@ public class Printer
         PointF startLocation = new PointF(40, 400);
         PointF destinationLocation = new PointF(40, 600);
         PointF priceLocation = new PointF(500, 750);
+        PointF specialLocation = new PointF(500, 750);
 
         //string imageFilePath = "C:\\Users\\kuehnle\\Documents\\TestWebsite\\NewTestTicket.bmp";
 
