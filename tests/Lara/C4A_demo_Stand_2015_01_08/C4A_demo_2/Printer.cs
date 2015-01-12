@@ -33,12 +33,7 @@ public class Printer
         printer.Open();
         printer.Claim(1000);
         printer.DeviceEnabled = true;
-        //ResizePicByWidth(ticket, 480);
-
-
-        //string ticketPathFile = "ticket.bmp";
-        //ticket.Save(ticketPathFile, System.Drawing.Imaging.ImageFormat.Bmp);
-        //printer.PrintBitmap(PrinterStation.Receipt, ticketPathFile, PosPrinter.PrinterBitmapAsIs, PosPrinter.PrinterBitmapCenter);
+        
         using (System.IO.MemoryStream ms = new MemoryStream())
         {
             ticket.Save(ms, System.Drawing.Imaging.ImageFormat.Bmp);
@@ -109,11 +104,6 @@ public class Printer
             PointF priceLocation = new PointF(320, 385);
 
 
-
-
-            //string imageFilePath = "C:\\Users\\kuehnle\\Documents\\TestWebsite\\NewTestTicket.bmp";
-
-
             Bitmap tempBmp = new Bitmap(560, 450);
 
             //auf das neu erstellte Bitmap draufzeichnen:
@@ -158,34 +148,26 @@ public class Printer
             }
             //Farbtiefe auf 1 reduzieren:
             Bitmap ticket = tempBmp.Clone(new Rectangle(0, 0, tempBmp.Width, tempBmp.Height), PixelFormat.Format1bppIndexed);
-
-            //ticket.Save(imageFilePath,System.Drawing.Imaging.ImageFormat.Bmp);
-            //ticket.Dispose();
             return ticket;
         }
         else
         {
             //Orte der verschiedenen Textboxen auf dem Ticket:
-            PointF logoLocation = new PointF(110, 10);
-            Point StartLine1 = new Point(20, 60);
-            Point EndLine1 = new Point(480, 60);
-            PointF ticketTypeLocation = new PointF(20, 75);
-            PointF dateLocation = new PointF(320, 75);
-            PointF personLocation = new PointF(20, 115);
-            PointF destinationLocation = new PointF(20, 220);
-            PointF specialLocation = new PointF(250, 300);
-            Point StartLine2 = new Point(20, 350);
-            Point EndLine2 = new Point(480, 350);
-            PointF totalLocation = new PointF(20, 385);
-            PointF priceLocation = new PointF(320, 385);
+            PointF logoLocation = new PointF(260, 10);
+            Point StartLine1 = new Point(100, 90);
+            Point EndLine1 = new Point(860, 90);
+            PointF ticketTypeLocation = new PointF(120, 110);
+            PointF dateLocation = new PointF(605, 110);
+            PointF personLocation = new PointF(120, 160);
+            PointF destinationLocation = new PointF(120, 270);
+            PointF specialLocation = new PointF(490, 430);
+            Point StartLine2 = new Point(100, 480);
+            Point EndLine2 = new Point(860, 480);
+            PointF totalLocation = new PointF(120, 535);
+            PointF priceLocation = new PointF(605, 535);
 
 
-
-
-            //string imageFilePath = "C:\\Users\\kuehnle\\Documents\\TestWebsite\\NewTestTicket.bmp";
-
-
-            Bitmap tempBmp = new Bitmap(560, 450);
+            Bitmap tempBmp = new Bitmap(1040, 630);
 
             //auf das neu erstellte Bitmap draufzeichnen:
             using (Graphics g = Graphics.FromImage(tempBmp))
@@ -193,26 +175,26 @@ public class Printer
 
                 g.Clear(Color.White);
 
-                using (Font arialFont = new Font("Arial", 30, FontStyle.Bold))
+                using (Font arialFont = new Font("Arial", 45, FontStyle.Bold))
                 {
                     g.DrawString("Cloud4all TVM", arialFont, Brushes.Black, logoLocation);
                 }
 
                 g.DrawLine(new Pen(Brushes.Black, 5), StartLine1, EndLine1);
 
-                using (Font arialFont = new Font("Arial", 20, FontStyle.Bold))
+                using (Font arialFont = new Font("Arial", 30, FontStyle.Bold))
                 {
                     g.DrawString(ticketType, arialFont, Brushes.Black, ticketTypeLocation);
                     g.DrawString(date, arialFont, Brushes.Black, dateLocation);
                 }
 
-                using (Font arialFont = new Font("Arial", 20, FontStyle.Regular))
+                using (Font arialFont = new Font("Arial", 32, FontStyle.Regular))
                 {
                     g.DrawString(person, arialFont, Brushes.Black, personLocation);
                     g.DrawString(special, arialFont, Brushes.Black, specialLocation);
                 }
 
-                using (Font arialFont = new Font("Arial", 33, FontStyle.Bold))
+                using (Font arialFont = new Font("Arial", 50, FontStyle.Bold))
                 {
 
                     g.DrawString(destination, arialFont, Brushes.Black, destinationLocation);
@@ -220,7 +202,7 @@ public class Printer
 
                 g.DrawLine(new Pen(Brushes.Black, 5), StartLine2, EndLine2);
 
-                using (Font arialFont = new Font("Arial", 25, FontStyle.Regular))
+                using (Font arialFont = new Font("Arial", 40, FontStyle.Regular))
                 {
                     g.DrawString("Summe:", arialFont, Brushes.Black, totalLocation);
                     g.DrawString(price, arialFont, Brushes.Black, priceLocation);
@@ -230,8 +212,6 @@ public class Printer
             //Farbtiefe auf 1 reduzieren:
             Bitmap ticket = tempBmp.Clone(new Rectangle(0, 0, tempBmp.Width, tempBmp.Height), PixelFormat.Format1bppIndexed);
 
-            //ticket.Save(imageFilePath,System.Drawing.Imaging.ImageFormat.Bmp);
-            //ticket.Dispose();
             return ticket;
         }
 
@@ -254,9 +234,6 @@ public class Printer
         if (printerType == "mobile_printer")
         {
             //Orte der verschiedenen Textboxen auf dem Ticket:
-            //PointF logoLocation = new PointF(170, 10);
-            //PointF typeLocation = new PointF(215, 45);
-            //PointF personLocation = new PointF(225, 90);
             PointF logoLocation = new PointF(170, 10);
             Point StartLine = new Point(50, 60);
             Point EndLine = new Point(550, 60);
@@ -374,59 +351,64 @@ public class Printer
             //Farbtiefe auf 1 reduzieren:
             Bitmap ticket = tempBmp.Clone(new Rectangle(0, 0, tempBmp.Width, tempBmp.Height), PixelFormat.Format1bppIndexed);
 
-            //ticket.Save(imageFilePath,System.Drawing.Imaging.ImageFormat.Bmp);
-            //ticket.Dispose();
+
             return ticket;
         }
         else
         {
-            //Orte der verschiedenen Textboxen auf dem Ticket:
-            PointF logoLocation = new PointF(170, 10);
-            PointF typeLocation = new PointF(215, 45);
-            PointF personLocation = new PointF(225, 90);
+            PointF logoLocation = new PointF(260, 10);
+            Point StartLine = new Point(100, 90);
+            Point EndLine = new Point(860, 90);
+            PointF ticketTypeLocation = new PointF(120, 110);
+            PointF dateLocation = new PointF(605, 110);
+            PointF personLocation = new PointF(120, 160);
+            PointF specialLocation = new PointF(490, 220);
 
-            Point StartLine1 = new Point(0, 160);
-            Point EndLine1 = new Point(720, 160);
-            PointF EightLocation = new PointF(20, 190);
+            int startLines = 280;
+            int n = 140;
 
-            Point StartLine2 = new Point(0, 250);
-            Point EndLine2 = new Point(720, 250);
-            PointF SevenLocation = new PointF(20, 280);
+            Point StartLine1 = new Point(0, startLines);
+            Point EndLine1 = new Point(1040, startLines);
+            PointF EightLocation = new PointF(50, startLines + 40);
 
-            Point StartLine3 = new Point(0, 340);
-            Point EndLine3 = new Point(720, 340);
-            PointF SixLocation = new PointF(20, 370);
+            Point StartLine2 = new Point(0, startLines + n);
+            Point EndLine2 = new Point(1040, startLines + n);
+            PointF SevenLocation = new PointF(50, startLines + n + 40);
 
-            Point StartLine4 = new Point(0, 430);
-            Point EndLine4 = new Point(720, 430);
-            PointF FiveLocation = new PointF(20, 460);
+            Point StartLine3 = new Point(0, startLines + 2 * n);
+            Point EndLine3 = new Point(1040, startLines + 2 * n);
+            PointF SixLocation = new PointF(50, startLines + 2 * n + 40);
 
-            Point StartLine5 = new Point(0, 520);
-            Point EndLine5 = new Point(720, 520);
-            PointF FourLocation = new PointF(20, 550);
+            Point StartLine4 = new Point(0, startLines + 3 * n);
+            Point EndLine4 = new Point(1040, startLines + 3 * n);
+            PointF FiveLocation = new PointF(50, startLines + 3 * n + 40);
 
-            Point StartLine6 = new Point(0, 610);
-            Point EndLine6 = new Point(720, 610);
-            PointF ThreeLocation = new PointF(20, 640);
+            Point StartLine5 = new Point(0, startLines + 4 * n);
+            Point EndLine5 = new Point(1040, startLines + 4 * n);
+            PointF FourLocation = new PointF(50, startLines + 4 * n + 40);
 
-            Point StartLine7 = new Point(0, 700);
-            Point EndLine7 = new Point(720, 700);
-            PointF TwoLocation = new PointF(20, 730);
+            Point StartLine6 = new Point(0, startLines + 5 * n);
+            Point EndLine6 = new Point(1040, startLines + 5 * n);
+            PointF ThreeLocation = new PointF(50, startLines + 5 * n + 40);
 
-            Point StartLine8 = new Point(0, 790);
-            Point EndLine8 = new Point(720, 790);
-            PointF OneLocation = new PointF(20, 820);
+            Point StartLine7 = new Point(0, startLines + 6 * n);
+            Point EndLine7 = new Point(1040, startLines + 6 * n);
+            PointF TwoLocation = new PointF(50, startLines + 6 * n + 40);
 
-            Point StartLine9 = new Point(0, 880);
-            Point EndLine9 = new Point(720, 880);
+            Point StartLine8 = new Point(0, startLines + 7 * n);
+            Point EndLine8 = new Point(1040, startLines + 7 * n);
+            PointF OneLocation = new PointF(50, startLines + 7 * n + 40);
 
-            PointF instructionLocation1 = new PointF(95, 1024);
-            PointF instructionLocation2 = new PointF(55, 1048);
-            PointF dateLocation = new PointF(275, 1080);
+            Point StartLine9 = new Point(0, startLines + 8 * n);
+            Point EndLine9 = new Point(1040, startLines + 8 * n);
 
+            PointF totalLocation = new PointF(100, 1550);
+            PointF priceLocation = new PointF(620, 1550);
 
+            PointF instructionLocation1 = new PointF(155, 1650);
+            PointF instructionLocation2 = new PointF(100, 1690);
 
-            Bitmap tempBmp = new Bitmap(720, 1200);
+            Bitmap tempBmp = new Bitmap(1040, 2001);
 
             using (Graphics g = Graphics.FromImage(tempBmp))
             {
@@ -442,10 +424,29 @@ public class Printer
                 g.DrawLine(new Pen(Brushes.Black, 5), StartLine8, EndLine8);
                 g.DrawLine(new Pen(Brushes.Black, 5), StartLine9, EndLine9);
 
+                using (Font arialFont = new Font("Arial", 45, FontStyle.Bold))
+                {
+                    g.DrawString("Cloud4all TVM", arialFont, Brushes.Black, logoLocation);
+                }
+
+                g.DrawLine(new Pen(Brushes.Black, 5), StartLine, EndLine);
+
+                g.DrawLine(new Pen(Brushes.Black, 5), StartLine1, EndLine1);
+
                 using (Font arialFont = new Font("Arial", 30, FontStyle.Bold))
                 {
+                    g.DrawString("Streifenticket", arialFont, Brushes.Black, ticketTypeLocation);
+                    g.DrawString(date, arialFont, Brushes.Black, dateLocation);
+                }
 
-                    g.DrawString("Cloud4all TVM", arialFont, Brushes.Black, logoLocation);
+                using (Font arialFont = new Font("Arial", 32, FontStyle.Regular))
+                {
+                    g.DrawString(person, arialFont, Brushes.Black, personLocation);
+                    g.DrawString(special, arialFont, Brushes.Black, specialLocation);
+                }
+                using (Font arialFont = new Font("Arial", 47, FontStyle.Bold))
+                {
+
                     g.DrawString("1", arialFont, Brushes.Black, OneLocation);
                     g.DrawString("2", arialFont, Brushes.Black, TwoLocation);
                     g.DrawString("3", arialFont, Brushes.Black, ThreeLocation);
@@ -455,46 +456,27 @@ public class Printer
                     g.DrawString("7", arialFont, Brushes.Black, SevenLocation);
                     g.DrawString("8", arialFont, Brushes.Black, EightLocation);
                 }
-                using (Font arialFont = new Font("Arial", 25, FontStyle.Bold))
+
+                using (Font arialFont = new Font("Arial", 40, FontStyle.Regular))
                 {
-                    g.DrawString("Streifenticket", arialFont, Brushes.Black, typeLocation);
-                }
-                using (Font arialFont = new Font("Arial", 20, FontStyle.Bold))
-                {
-                    g.DrawString(person, arialFont, Brushes.Black, personLocation);
+                    g.DrawString("Summe:", arialFont, Brushes.Black, totalLocation);
+                    g.DrawString(price, arialFont, Brushes.Black, priceLocation);
                 }
 
-                using (Font arialFont = new Font("Arial", 15, FontStyle.Bold))
+                using (Font arialFont = new Font("Arial", 22, FontStyle.Bold))
                 {
                     g.DrawString("Bitte stempeln Sie pro Zone einen Streifen.", arialFont, Brushes.Black, instructionLocation1);
                     g.DrawString("Ab dem Zeitpunkt des Stempelns für 2 Stunden gültig.", arialFont, Brushes.Black, instructionLocation2);
-                    g.DrawString(date, arialFont, Brushes.Black, dateLocation);
+
                 }
             }
             //Farbtiefe auf 1 reduzieren:
             Bitmap ticket = tempBmp.Clone(new Rectangle(0, 0, tempBmp.Width, tempBmp.Height), PixelFormat.Format1bppIndexed);
 
-            //ticket.Save(imageFilePath,System.Drawing.Imaging.ImageFormat.Bmp);
-            //ticket.Dispose();
             return ticket;
         }
 
-
-
-
     }
 
-    private static Bitmap ResizePicByWidth(Image sourceImage, double newWidth)
-    {
-        double sizeFactor = newWidth / sourceImage.Width;
-        double newHeigth = sizeFactor * sourceImage.Height;
-        Bitmap newImage = new Bitmap((int)newWidth, (int)newHeigth);
-        using (Graphics g = Graphics.FromImage(newImage))
-        {
-            g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
-            //InterpolationMode.HighQualityBicubic;
-            g.DrawImage(sourceImage, new Rectangle(0, 0, (int)newWidth, (int)newHeigth));
-        }
-        return newImage;
-    }
+  
 }
