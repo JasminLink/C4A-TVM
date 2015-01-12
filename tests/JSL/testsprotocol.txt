@@ -1,0 +1,51 @@
+
+tests
+
+http://127.0.0.1:8081/sammy/settings/%7B%22OS%22:%7B%22id%22:%22linux%22%7D,%22solutions%22:[%7B%22id%22:%22org.gnome.desktop.a11y.magnifier%22%7D]%7D
+{"org.gnome.desktop.a11y.magnifier":{"mag-factor":2,"mouse-tracking":"centered","screen-position":"full-screen"}}
+
+changed mag-factor to 3 - works
+
+no such solution descrition
+http://127.0.0.1:8081/sammy/settings/%7B%22OS%22:%7B%22id%22:%22li%22%7D,%22solutions%22:[%
+{"isError":true,"message":"ENOENT, open 'C:\\Program Files\\GPII\\node_modules\\universal\\testData\\solutions\\li.json'"}
+
+no such solution description
+http://127.0.0.1:8081/sammy/settings/%7B%22OS%22:%7B%22id%22:%22web%22%7D,%22solutions%22:[%7B%22id%22:%22org.gnome.desktop.a11y.magnifier%22%7D]%7D
+{}
+
+http://127.0.0.1:8081/sammy/settings/%7B%22OS%22:%7B%22id%22:%22web%22%7D,%22solutions%22:[%7B%22id%22:%22org.chrome.cloud5chrome%22%7D]%7D
+{}
+
+http://127.0.0.1:8081/sammy/settings/%7B%22OS%22:%7B%22id%22:%22web%22%7D,%22solutions%22:[%7B%22id%22:%22de.fraunhofer.iao.C4A-TVM%22%7D]%7D
+{}
+
+no such user
+http://127.0.0.1:8081/san/settings/%7B%22OS%22:%7B%22id%22:%22linux%22%7D,%22solutions%22:[%7B%22id%22:%22org.gnome.desktop.a11y.magnifier%22%7D]%7D
+{"isError":true,"message":"ENOENT, open 'C:\\Program Files\\GPII\\node_modules\\universal\\testData\\preferences\\san.json'"}
+
+web config cloud4chrome
+http://127.0.0.1:8081/sammy/settings/%7B%22OS%22:%7B%22id%22:%22web%22%7D,%22solutions%22:[%7B%22id%22:%22org.chrome.cloud4chrome%22%7D]%7D
+{"org.chrome.cloud4chrome":{"fontSize":"x-large","magnification":3,"invertColours":true}}
+
+Id mistyped
+http://127.0.0.1:8081/sammy/settings/%7B%22OS%22:%7B%22id%22:%22web%22%7D,%22solutions%22:[%7B%22id%22:%22id%22:%20%22de.fraunhofer.iao.C4A-TVM%22%7D]%7D
+TypeError: Cannot read property 'events' of undefined at gpii.request.flowManager.onSettings (C:\Program Files\GPII\node_modules\universal\gpii\node_modules\flowManager\src\Settings.js:25:33) at invokeInvoker (C:\Program Files\GPII\node_modules\universal\node_modules\infusion\src\framework\core\js\FluidIoC.js:1646:29) at 
+
+
+http://127.0.0.1:8081/sammy/settings/{"OS":{"id":"web"},"solutions":[{"id":"id": "de.fraunhofer.iao.C4A-TVM"}]}
+http://127.0.0.1:8081/sammy/settings/%7B%22OS%22:%7B%22id%22:%22web%22%7D,%22solutions%22:[%7B%22id%22:%22de.fraunhofer.iao.C4A-TVM%22%7D]%7D
+http://127.0.0.1:8081/sammy/settings/%7B%22OS%22:%7B%22id%22:%22web%22%7D,%22solutions%22:[%7B%22id%22:%22id%22:%20%22de.fraunhofer.iao.C4A-TVM%22%7D]%7D
+
+start with JSON-solution description
+
+contrastTheme transformation
+http://127.0.0.1:8081/sammy/settings/%7B%22OS%22:%7B%22id%22:%22web%22%7D,%22solutions%22:%5B%7B%22id%22:%22de.fraunhofer.iao.C4A-TVM%22%7D%5D%7D
+{"isError":true,"message":"[object Object]ASSERTION FAILED: SyntaxError: Unexpected string"}
+-> missing , in NP set
+
+
+
+
+
+
