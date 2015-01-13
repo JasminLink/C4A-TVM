@@ -13,6 +13,22 @@ https://github.com/GPII/universal/blob/master/documentation/FlowManager.md
 To do this, you can follow the first two steps at the simple installation instructions. 
 As a developer of or integrator of your web application, you will not have to make changes to the source code of the GPII itself. For those who want it, or have a look at the internals of the GPII,  this is described in the developers' version of installation directions: http://wiki.gpii.net/w/Setting_Up_Your_Development_Environment.
 
+Having installed nodes and the GPII, you can start it manually by going via a command line tool to your installation directory, sth. like
+
+cd C:\Programme\GPII
+
+set the nodes environment
+set NODE_ENV=cloudBased.development.all.local
+
+start the node application
+C:\Programme\nodejs\node.exe node_modules/universal/gpii.js node_modules/universal/gpii/configs/
+
+rem normally you may skip the "C:\Programme\nodejs\node.exe" and just write this instead, but for me it is not working right now: node node_modules/universal/gpii.js node_modules/universal/gpii/configs/
+
+pause
+
+Writing these commands to a batch file and putting it into your GPII root directory will make starting the FlowManager easier.
+When starting sucessfully you should see something like 
 
 http://wiki.gpii.net/w/Flow_Manager 
  

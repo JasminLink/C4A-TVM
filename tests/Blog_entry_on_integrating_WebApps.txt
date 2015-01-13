@@ -1,0 +1,16 @@
+
+Hi Manuel, 
+
+attached you find a lengthy explanation of how I would describe the integration of a web application to someone new to the GPII. Maybe it is a bit boring and too detailed for us, who know it and have experience with the system. But in order to really be inclusive, also to not that experienced web application developers, I think one can not be too clear, make too much examples or use too simple language. 
+
+http://blogs.cloud4all.info/developers/information-about-your-solution/integrating-a-web-based-solution/ 
+I think this entry should explain how a native application is integrated, and then piont out the differences for a web application. 
+
+In section 1 there is a link to http://blogs.cloud4all.info/developers/download-gpii-for-windows-7/
+In this installation description the installation of nodes is omitted, whereas at the wiki it is described to be necessary.
+The download link there points to an (old?) integrated(??) version on a google drive, 
+which installs node v. 0.8.25, installs MINGW, which for this pupose is not necessary, installs a USBListener which did not run on my PC but caus an error message that libstdc was missing. the web solution is missing, and the config files dat from 13th of september 2014. 
+
+So i would suggest to delete the contents of that page an let it also point to the wiki installation, which points to this download page.  https://demolabs.singularlogic.eu/cloud4all/
+
+
