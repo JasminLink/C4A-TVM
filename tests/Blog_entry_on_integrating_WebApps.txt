@@ -13,4 +13,20 @@ which installs node v. 0.8.25, installs MINGW, which for this pupose is not nece
 
 So i would suggest to delete the contents of that page an let it also point to the wiki installation, which points to this download page.  https://demolabs.singularlogic.eu/cloud4all/
 
+paragraph two and three are fine. except from the path to the web solutions file, which would be 
+C:\Program Files\GPII\node_modules\universal\testData\solutions\web.json
+with the new version.
+
+the first example to be made, might also be a one to one example, like just using the same settings as GPII. 
+
+then number 4 and transformations may be explained. 
+the link provided it correct, but maybe confusing for people new to JSON, becase there are "s missing in some examples: 
+http://wiki.gpii.net/w/Architecture_-_Available_transformation_functions#Conditional transform (fluid.transforms.condition)
+This should be controlled on the whole page. 
+
+Writing acceptance tests is something that I considder a very late stage, firt time visitors should not be bothered with that, but told with whom to talk, if the want thei solution integrated to the GPII. 
+
+
+
+
 
