@@ -78,6 +78,7 @@ namespace C4A_demo_2
             runjQueryCode("$('.button_eng_normal_eservice').switchClass('button_eng_normal_eservice','button_eng_contrast_eservice','slow');");
             runjQueryCode("$('.button_eng_normal').switchClass('button_eng_normal','button_eng_contrast','slow');");
             runjQueryCode("$('.button_hoch_normal').switchClass('button_hoch_normal','button_hoch_contrast','slow');");
+            runjQueryCode("$('.button_eng_normal_c4a').switchClass('button_eng_normal_c4a','button_eng_contrast_c4a','slow');");
             runjQueryCode("$('.button_hoch_normal_touristen').switchClass('button_hoch_normal_touristen','button_hoch_contrast_touristen','slow');");
             
         }
@@ -91,6 +92,7 @@ namespace C4A_demo_2
             runjQueryCode("$('.startseite_C4A').switchClass('startseite_C4A','startseite_C4A_contrast','slow');");
             runjQueryCode("$('.zeiticon').switchClass('zeiticon','zeiticon_contrast','slow');");
             runjQueryCode("$('.time').switchClass('time','time_contrast','slow');");
+            runjQueryCode("$('.button_eng_normal_c4a').switchClass('button_eng_normal_c4a','button_eng_contrast_c4a','slow');");
             runjQueryCode("$('.button_normal').switchClass('button_normal','button_contrast','slow');");
             runjQueryCode("$('.button_eng_normal_eservice').switchClass('button_eng_normal_eservice','button_eng_contrast_eservice','slow');");
             runjQueryCode("$('.button_eng_normal').switchClass('button_eng_normal','button_eng_contrast','slow');");
@@ -102,14 +104,21 @@ namespace C4A_demo_2
 
         protected void HyperLinkC_Click(object sender, EventArgs e)
         {
+            textfeld_debug_label.Text = "HyperLinkC_Click";
             startButton_Click(sender, e);
             
             
             Global.current_theme = "contrast";
-            // Global.current_fontface = "Comic Sans MS";
+            Global.current_fontface = "Calibri";
             // applyFontFace_clientside(Global.current_fontface);
             // serverside_apply_style(Global.current_theme);
-            
+
+
+            ani_normal_to_contrast();
+         }
+
+        protected void ani_normal_to_contrast()
+        {
             // runjQueryCode("$('.button_contrast').switchClass('button_contrast','button_crazy','slow');$('.button_crazy').switchClass('button_crazy','button_contrast','fast');");
             runjQueryCode("$('.startseite_C4A').switchClass('startseite_C4A','startseite_C4A_contrast','slow');");
             runjQueryCode("$('.area_header').switchClass('area_header','area_header_contrast','slow');");
@@ -120,45 +129,42 @@ namespace C4A_demo_2
             runjQueryCode("$('.button_eng_normal').switchClass('button_eng_normal','button_eng_contrast','slow');");
             runjQueryCode("$('.button_hoch_normal').switchClass('button_hoch_normal','button_hoch_contrast','slow');");
             runjQueryCode("$('.button_hoch_normal_touristen').switchClass('button_hoch_normal_touristen','button_hoch_contrast_touristen','slow');");
-            
-         }
+            runjQueryCode("$('.button_eng_normal_c4a').switchClass('button_eng_normal_c4a','button_eng_contrast_c4a','slow');");
 
-
+        }
 
         protected void DesignSwitch_Click(object sender, EventArgs e)
         {
-            debugbutton.Text = "startButtonClick";
+            textfeld_debug_label.Text = "DesignSwitch_Click";
             TVMSettings ts = TVM.listenForUser();
+            String settings = "";
+            settings = settings + "\"" + ts.TVMPreferences.userToken + "\" ";
+            settings = settings + "\"" + ts.TVMPreferences.contrastTheme + "\" ";
+            settings = settings + "\"" + ts.TVMPreferences.fontSize + "\" ";
+            settings = settings + "\"" + ts.TVMPreferences.fontFace + "\" ";
+            settings = settings + "\"" + ts.TVMPreferences.buttonSize + "\" ";
+            settings = settings + "\"" + ts.TVMPreferences.timeOut + "\" ";
+            settings = settings + "\"" + ts.TVMPreferences.language + "\" ";
+            textfeld_debug_label.Text = settings;
+
             invoke_Settings(ts);
-            
-            
-            // String newstyle = "button_contrast";
-            // Switch_Design(newstyle);
-            // Switch_Design("area_header", "area_header_contrast");
-                        
-            Global.current_fontface = "Comic Sans MS";
-            
-            applyFontFace_clientside(Global.current_fontface);
-            applyFontFace(Global.current_fontface);
-            Response.Redirect("Default.aspx");
+
         }
 
 
         protected void startButton_Click(object sender, EventArgs e)
         {
-            
+            textfeld_debug_label.Text = "startButton_Click";
             TVMSettings ts = TVM.listenForUser();
             invoke_Settings(ts);
-            //debugging only
-            freq_3_button.Text = "\"" + ts.TVMPreferences.userToken + " " + ts.TVMPreferences.contrastTheme + " " + ts.TVMPreferences.language + "\"";
             
-
         }
 
 
         protected void invoke_Settings(TVMSettings ts)
         {
 
+            //contrast theme
             if (ts.TVMPreferences.contrastTheme == "yellow-black"){
                 Global.current_theme = "contrast";
             }
@@ -166,14 +172,48 @@ namespace C4A_demo_2
             {
                 Global.current_theme = "normal";
             }
-            serverside_apply_style(Global.current_theme);
-        
-            
-            applyFontFace_clientside(Global.current_fontface);
-            applyFontFace(Global.current_fontface);
+            //serverside_apply_style(Global.current_theme);
 
-            apply_language(ts.TVMPreferences.language);
+            //font size
+            if (ts.TVMPreferences.fontSize == "big" ){
+                //
+            }else{
+                //
+            }
+            // apply fontsize... ?
             
+            //font face
+            if (ts.TVMPreferences.fontFace.Contains("omic")){
+                Global.current_fontface = "Comic Sans MS";
+            }else{
+                Global.current_fontface = "Calibri";
+            }
+
+            //button siz not in use
+            if (ts.TVMPreferences.buttonSize == "big")
+            {
+                //
+            }
+            else
+            {
+                //
+            }
+            // apply buttonSize... ?
+            
+            
+
+
+            //timeout
+            if (ts.TVMPreferences.timeOut == "long"){
+                Global.timeout = 60000;
+            }else{
+                Global.timeout = 45000;
+            }
+
+            //language
+            apply_language(ts.TVMPreferences.language);
+
+            Response.Redirect("Default.aspx");
         }
         
 
@@ -183,7 +223,6 @@ namespace C4A_demo_2
             Style style = new Style();
             style.Font.Size = 36;
         }
-
 
         protected void apply_language(String language)
         {
@@ -214,7 +253,7 @@ namespace C4A_demo_2
 
             if (language.Contains("el"))
             {
-                Global.current_language = "el";
+                Global.current_language = "gr";
             }
 
         }
@@ -238,7 +277,6 @@ namespace C4A_demo_2
             if (Global.current_language.Contains("it")) lang_button_it.CssClass = "language_button_it_pressed";
             if (Global.current_language.Contains("gr")) lang_button_gr.CssClass = "language_button_gr_pressed";
         }
-
 
         protected void timeout_ticker_Tick(object sender, EventArgs e)
         {
@@ -267,13 +305,10 @@ namespace C4A_demo_2
             label_11.Text = Global.wordingtable[26];
             label_12.Text = Global.wordingtable[24];
 
-
-            
             // label_27.Text = Global.wordingtable[5];
 
             dest_choice.Text = Global.wordingtable[8];
         }
-
 
         public void applyFontFace(String family)
         {
@@ -328,7 +363,7 @@ namespace C4A_demo_2
             freq_3_button.CssClass = "button_normal";
 
             DesignSwitch.CssClass = "button_eng_normal";
-            HyperLinkC.CssClass = "button_eng_normal";
+            HyperLinkC.CssClass = "button_eng_normal_c4a";
             touristbutton.CssClass = "button_hoch_normal_touristen";
 
             zeiticon.CssClass = "zeiticon";
@@ -346,33 +381,34 @@ namespace C4A_demo_2
 
             else if(theme.Contains("contrast"))
             {
+                ani_normal_to_contrast();
+
                 display.CssClass = "startseite_C4A_contrast";
 
-            special_1.CssClass = "button_contrast";
-            special_2.CssClass = "button_contrast";
-            special_3.CssClass = "button_contrast";
-            special_4.CssClass = "button_contrast";
-            special_5.CssClass = "button_contrast";
+                special_1.CssClass = "button_contrast";
+                special_2.CssClass = "button_contrast";
+                special_3.CssClass = "button_contrast";
+                special_4.CssClass = "button_contrast";
+                special_5.CssClass = "button_contrast";
+                
+                dest_choice.CssClass = "button_contrast";
+                freq_1_button.CssClass = "button_contrast";
+                freq_2_button.CssClass = "button_contrast";
+                freq_3_button.CssClass = "button_contrast";
 
-            
-            
-            dest_choice.CssClass = "button_contrast";
-            freq_1_button.CssClass = "button_contrast";
-            freq_2_button.CssClass = "button_contrast";
-            freq_3_button.CssClass = "button_contrast";
+                DesignSwitch.CssClass = "button_eng_contrast";
+                HyperLinkC.CssClass = "button_eng_contrast_c4a";
+                touristbutton.CssClass = "button_hoch_contrast_touristen";
 
-            DesignSwitch.CssClass = "button_eng_contrast";
-            HyperLinkC.CssClass = "button_eng_contrast";
-            touristbutton.CssClass = "button_hoch_contrast_touristen";
+                zeiticon.CssClass = "zeiticon_contrast";
+                Uhr.Attributes["style"] = "font-style: bold; z-index: 2; color: #f4fc00; font-size:24px; ";
 
-            zeiticon.CssClass = "zeiticon_contrast";
-            Uhr.Attributes["style"] = "font-style: bold; z-index: 2; color: #f4fc00; font-size:24px; ";
+                label_1.CssClass = "area_header_contrast";
+                label_3.CssClass = "area_header_contrast";
+                label_4.CssClass = "area_header_contrast";
 
-            label_1.CssClass = "area_header_contrast";
-            label_3.CssClass = "area_header_contrast";
-            label_4.CssClass = "area_header_contrast";
+                service_label.CssClass = "area_header_contrast";
 
-            service_label.CssClass = "area_header_contrast";
             }
             
             

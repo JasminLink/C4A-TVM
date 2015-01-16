@@ -78,7 +78,7 @@ namespace C4A_demo_2
 
         public static String fillWordingTable(String lang)
         {
-            XmlTextReader reader = new XmlTextReader("C:/GPII_GitHub/C4A-TVM/tests/WGB/C4A_demo_Stand_2015_01_08/C4A_demo_2/WORDING.xml");
+            XmlTextReader reader = new XmlTextReader("C:/C4A-TVM-WORDING/WORDING.xml");
             StringBuilder sb = new StringBuilder();
             int k = 0;
             wordingtable[k] = lang;

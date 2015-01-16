@@ -115,9 +115,20 @@ namespace Demo_GPII_Adapter
             }
             return check;
         }
+
+        public static Boolean checkIfTicketPaid(string Preis)
+        {
+            //ToDo: add real payment with CashUnit
+            return true;
+        }
+
+        public static Boolean checkForCashUnit()
+        {
+            //ToDo: add real payment with CashUnit
+            return false;
+        }
         
-        
-        
+
 
     }
 }

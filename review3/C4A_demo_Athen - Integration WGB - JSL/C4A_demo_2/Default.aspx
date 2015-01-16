@@ -93,7 +93,7 @@
 
         
         </div>
-        <div id="leerspalte1"></div>
+        <div id="leerspalte"></div>
         <div id="mitte">
 
         <div id="textfeld_mitte"><div class="area_header"><asp:Label runat="server" id="label_4"></asp:Label></div><br /></div>
@@ -111,8 +111,7 @@
                 CssClass="button_normal" onclick="special_5_Click"><asp:Label runat="server" id="label_7"></asp:Label></asp:LinkButton>
         </div>
  
-        <div id="leerspalte2"></div>
-        
+        <div id="leerspalte"></div>
         
         <div id="rechts">
         <div id="textfeld_rechts" runat="server">
@@ -132,9 +131,8 @@
     
 </div>
  <div id="debug">
-             <asp:LinkButton runat="server" id="debugbutton"  
-                CssClass="button_normal" ><asp:Label runat="server" id="debug_label">debug</asp:Label></asp:LinkButton>
- 
+             <div id="textfeld_debug"><asp:Label runat="server" id="textfeld_debug_label" CssClass="area_header"></asp:Label></div>
+            
  </div>
 
 <div id="footer">
