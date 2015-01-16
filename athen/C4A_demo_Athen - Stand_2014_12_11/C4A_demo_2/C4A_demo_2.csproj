@@ -108,7 +108,9 @@
     <Content Include="tourist.aspx" />
     <Content Include="Web.config" />
     <Content Include="weekly_ticket_spec.aspx" />
-    <Content Include="WORDING.xml" />
+    <Content Include="\\iao-filer6.iao.fraunhofer.de\Benutzer432%24\link\Meine Dokumente\WORDING.xml">
+      <Link>WORDING.xml</Link>
+    </Content>
     <Content Include="wowstyles.css" />
   </ItemGroup>
   <ItemGroup>

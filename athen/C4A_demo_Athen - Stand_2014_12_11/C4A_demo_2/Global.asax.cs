@@ -99,7 +99,7 @@ namespace C4A_demo_2
 
         public static String fillWordingTable(String lang)
         {
-            XmlTextReader reader = new XmlTextReader("C:/Users/wbeinhau/Dropbox/Automaten/C4a/C4A_demo_2/C4A_demo_2/WORDING.xml");
+            XmlTextReader reader = new XmlTextReader("C:/WORDING.xml");
             StringBuilder sb = new StringBuilder();
             int k = 0;
             wordingtable[k] = lang;
