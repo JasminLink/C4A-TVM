@@ -11,6 +11,10 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
 using System.Text;
+using Microsoft.PointOfService.Legacy;
+using Microsoft.PointOfService.Management;
+using Microsoft.PointOfService;
+using Demo_GPII_Adapter;
 
 
 namespace C4A_demo_2
@@ -98,6 +102,9 @@ namespace C4A_demo_2
 
         protected void HyperLinkC_Click(object sender, EventArgs e)
         {
+            startButton_Click(sender, e);
+            
+            
             Global.current_theme = "contrast";
             // Global.current_fontface = "Comic Sans MS";
             // applyFontFace_clientside(Global.current_fontface);
@@ -120,6 +127,10 @@ namespace C4A_demo_2
 
         protected void DesignSwitch_Click(object sender, EventArgs e)
         {
+            debugbutton.Text = "startButtonClick";
+            TVMSettings ts = TVM.listenForUser();
+            invoke_Settings(ts);
+            
             
             // String newstyle = "button_contrast";
             // Switch_Design(newstyle);
@@ -133,8 +144,39 @@ namespace C4A_demo_2
         }
 
 
+        protected void startButton_Click(object sender, EventArgs e)
+        {
+            
+            TVMSettings ts = TVM.listenForUser();
+            invoke_Settings(ts);
+            //debugging only
+            freq_3_button.Text = "\"" + ts.TVMPreferences.userToken + " " + ts.TVMPreferences.contrastTheme + " " + ts.TVMPreferences.language + "\"";
+            
 
+        }
+
+
+        protected void invoke_Settings(TVMSettings ts)
+        {
+
+            if (ts.TVMPreferences.contrastTheme == "yellow-black"){
+                Global.current_theme = "contrast";
+            }
+            else
+            {
+                Global.current_theme = "normal";
+            }
+            serverside_apply_style(Global.current_theme);
         
+            
+            applyFontFace_clientside(Global.current_fontface);
+            applyFontFace(Global.current_fontface);
+
+            apply_language(ts.TVMPreferences.language);
+            
+        }
+        
+
 
         public void setfontsize(int size)
         {
@@ -142,6 +184,40 @@ namespace C4A_demo_2
             style.Font.Size = 36;
         }
 
+
+        protected void apply_language(String language)
+        {
+            if (language.Contains("de"))
+            {
+                Global.current_language = "de";
+            }
+
+            if (language.Contains("en"))
+            {
+                Global.current_language = "en";
+            }
+
+            if (language.Contains("fr"))
+            {
+                Global.current_language = "fr";
+            }
+
+            if (language.Contains("es"))
+            {
+                Global.current_language = "es";
+            }
+
+            if (language.Contains("it"))
+            {
+                Global.current_language = "it";
+            }
+
+            if (language.Contains("el"))
+            {
+                Global.current_language = "el";
+            }
+
+        }
         
         protected void Page_Load(object sender, EventArgs e)
         {

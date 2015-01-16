@@ -82,7 +82,7 @@
         <asp:LinkButton runat="server" id="dest_choice" 
                 CssClass="button_normal" onclick="dest_choice_Click"><asp:Label runat="server" ID="label_8">Zielhaltestelle</asp:Label></asp:LinkButton>
         
-        <div id="Div1" style="z-index: 2"><div class="area_header" style="z-index: 2"><asp:Label runat="server" id="label_3"></asp:Label></div><br /></div>
+        <div id="Div1" style="z-index: 2"><div class="area_header" style="z-index: 2"><asp:Label runat="server" id="label_3"></asp:Label></div><br/></div>
 		<asp:LinkButton runat="server" id="freq_1_button"  
                 CssClass="button_normal" onclick="freq_1_button_Click"><asp:Label runat="server" id="label_21">München Flughafen</asp:Label></asp:LinkButton>
 		<asp:LinkButton runat="server" id="freq_2_button"  
@@ -93,7 +93,7 @@
 
         
         </div>
-        <div id="leerspalte"></div>
+        <div id="leerspalte1"></div>
         <div id="mitte">
 
         <div id="textfeld_mitte"><div class="area_header"><asp:Label runat="server" id="label_4"></asp:Label></div><br /></div>
@@ -111,7 +111,7 @@
                 CssClass="button_normal" onclick="special_5_Click"><asp:Label runat="server" id="label_7"></asp:Label></asp:LinkButton>
         </div>
  
-        <div id="leerspalte"></div>
+        <div id="leerspalte2"></div>
         
         
         <div id="rechts">
@@ -121,8 +121,7 @@
         <asp:LinkButton runat="server" id="DesignSwitch"  CssClass="button_eng_normal_eservice" 
                      OnClick="DesignSwitch_Click"><div runat="server" id="label_25" style="position: relative; left:-8px;" >e-Service</div></asp:LinkButton> 
                     
-        <asp:LinkButton runat="server" id="HyperLinkC"  
-                    CssClass="button_eng_normal" 
+        <asp:LinkButton runat="server" id="HyperLinkC"    CssClass="button_eng_normal_c4a" 
                     onclick="btnAsynchPostback_Click"><asp:Label runat="server" id="label_27" style="position: relative; left:-8px;">Cloud4All</asp:Label></asp:LinkButton>   
         
         <asp:LinkButton runat="server" id="touristbutton"  
@@ -132,6 +131,12 @@
        
     
 </div>
+ <div id="debug">
+             <asp:LinkButton runat="server" id="debugbutton"  
+                CssClass="button_normal" ><asp:Label runat="server" id="debug_label">debug</asp:Label></asp:LinkButton>
+ 
+ </div>
+
 <div id="footer">
 
 
