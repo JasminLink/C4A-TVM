@@ -30,31 +30,35 @@ using Microsoft.PointOfService;
         {
             //warten auf DataEvent und Ausgabe der Daten in sData
 
+            sData = null;
+
             for (int i = 0; i < 3; i++)
             {
-                try
-                {
-                    scanner.Open();
-                    scanner.Claim(1000);
-                    scanner.DeviceEnabled = true;
-
-                    scanner.DataEvent += new DataEventHandler(scanner_DataEvent);
-                    scanner.DataEventEnabled = true;
-                    scanner.DecodeData = true;
-
-
-                    while (scanner.DeviceEnabled == true)
+                if (sData == null){
+                    try
                     {
-                        System.Threading.Thread.Sleep(1);
-                    }
+                        scanner.Open();
+                        scanner.Claim(1000);
+                        scanner.DeviceEnabled = true;
 
-                    scanner.Release();
-                    scanner.Close();
-                }
-                catch (Microsoft.PointOfService.PosControlException e)
-                {
-                    Console.WriteLine(e.ToString());
-                    Console.ReadLine();
+                        scanner.DataEvent += new DataEventHandler(scanner_DataEvent);
+                        scanner.DataEventEnabled = true;
+                        scanner.DecodeData = true;
+
+
+                        while (scanner.DeviceEnabled == true)
+                        {
+                            System.Threading.Thread.Sleep(1);
+                        }
+
+                        scanner.Release();
+                        scanner.Close();
+                    }
+                    catch (Microsoft.PointOfService.PosControlException e)
+                    {
+                        Console.WriteLine(e.ToString());
+                        Console.ReadLine();
+                    }
                 }
             }
 

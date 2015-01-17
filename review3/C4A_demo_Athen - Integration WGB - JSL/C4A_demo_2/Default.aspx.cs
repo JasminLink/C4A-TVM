@@ -102,21 +102,40 @@ namespace C4A_demo_2
         }
 
 
+        protected void GPII_button_Click(object sender, EventArgs e)
+        {
+            textfeld_debug_label.Text = "GPII_button_Click";
+            TVMSettings ts = TVM.listenForUser();
+            String settings = "";
+            settings = settings + "\"" + ts.TVMPreferences.userToken + "\" ";
+            settings = settings + "\"" + ts.TVMPreferences.contrastTheme + "\" ";
+            settings = settings + "\"" + ts.TVMPreferences.fontSize + "\" ";
+            settings = settings + "\"" + ts.TVMPreferences.fontFace + "\" ";
+            settings = settings + "\"" + ts.TVMPreferences.buttonSize + "\" ";
+            settings = settings + "\"" + ts.TVMPreferences.timeOut + "\" ";
+            settings = settings + "\"" + ts.TVMPreferences.language + "\" ";
+            textfeld_debug_label.Text = settings;
+
+            textfeld_debug_label.Text= Global.ticket.type + Global.ticket.special + Global.ticket.destination + Global.ticket.price.ToString() + Global.ticket.tarif;
+            
+            TVM.printTicket(Global.ticket.type, Global.ticket.special, Global.ticket.destination, Global.ticket.price.ToString(), Global.ticket.tarif);
+            String ticketType = "Tageskarte";
+            String special = "Fahrradmitnahme";
+            String destination = "3 Zonen";
+            String price = "7,20 €";
+            String person = "für Sarah";
+
+            textfeld_debug_label.Text = (ticketType + special + destination + price + person);
+            //TVM.printTicket(ticketType, special, destination, price, person); 
+
+            //invoke_Settings(ts);
+
+        }
+
         protected void HyperLinkC_Click(object sender, EventArgs e)
         {
-            textfeld_debug_label.Text = "HyperLinkC_Click";
-            startButton_Click(sender, e);
-            
-            
-            Global.current_theme = "contrast";
-            Global.current_fontface = "Calibri";
-            // applyFontFace_clientside(Global.current_fontface);
-            // serverside_apply_style(Global.current_theme);
-
-
-            ani_normal_to_contrast();
-         }
-
+        }
+         
         protected void ani_normal_to_contrast()
         {
             // runjQueryCode("$('.button_contrast').switchClass('button_contrast','button_crazy','slow');$('.button_crazy').switchClass('button_crazy','button_contrast','fast');");
@@ -135,31 +154,8 @@ namespace C4A_demo_2
 
         protected void DesignSwitch_Click(object sender, EventArgs e)
         {
-            textfeld_debug_label.Text = "DesignSwitch_Click";
-            TVMSettings ts = TVM.listenForUser();
-            String settings = "";
-            settings = settings + "\"" + ts.TVMPreferences.userToken + "\" ";
-            settings = settings + "\"" + ts.TVMPreferences.contrastTheme + "\" ";
-            settings = settings + "\"" + ts.TVMPreferences.fontSize + "\" ";
-            settings = settings + "\"" + ts.TVMPreferences.fontFace + "\" ";
-            settings = settings + "\"" + ts.TVMPreferences.buttonSize + "\" ";
-            settings = settings + "\"" + ts.TVMPreferences.timeOut + "\" ";
-            settings = settings + "\"" + ts.TVMPreferences.language + "\" ";
-            textfeld_debug_label.Text = settings;
-
-            invoke_Settings(ts);
 
         }
-
-
-        protected void startButton_Click(object sender, EventArgs e)
-        {
-            textfeld_debug_label.Text = "startButton_Click";
-            TVMSettings ts = TVM.listenForUser();
-            invoke_Settings(ts);
-            
-        }
-
 
         protected void invoke_Settings(TVMSettings ts)
         {
@@ -167,6 +163,7 @@ namespace C4A_demo_2
             //contrast theme
             if (ts.TVMPreferences.contrastTheme == "yellow-black"){
                 Global.current_theme = "contrast";
+                //ani_normal_to_contrast();
             }
             else
             {
@@ -263,7 +260,6 @@ namespace C4A_demo_2
             timeout_ticker.Interval = Global.timeout;
 
             serverside_apply_style(Global.current_theme);
-            // applyFontFace_clientside(Global.current_fontface);
             applyFontFace(Global.current_fontface);
             applyFontFace_clientside(Global.current_fontface);
             applyLanguage(Global.current_language);
@@ -363,7 +359,7 @@ namespace C4A_demo_2
             freq_3_button.CssClass = "button_normal";
 
             DesignSwitch.CssClass = "button_eng_normal";
-            HyperLinkC.CssClass = "button_eng_normal_c4a";
+            GPII_button.CssClass = "button_eng_normal_c4a";
             touristbutton.CssClass = "button_hoch_normal_touristen";
 
             zeiticon.CssClass = "zeiticon";
@@ -397,7 +393,7 @@ namespace C4A_demo_2
                 freq_3_button.CssClass = "button_contrast";
 
                 DesignSwitch.CssClass = "button_eng_contrast";
-                HyperLinkC.CssClass = "button_eng_contrast_c4a";
+                GPII_button.CssClass = "button_eng_contrast_c4a";
                 touristbutton.CssClass = "button_hoch_contrast_touristen";
 
                 zeiticon.CssClass = "zeiticon_contrast";
@@ -552,28 +548,28 @@ namespace C4A_demo_2
 
         protected void special_1_Click(object sender, EventArgs e)
         {
-            Response.Redirect("short.aspx");
+            //Response.Redirect("short.aspx");
         }
 
         protected void special_2_Click(object sender, EventArgs e)
         {
-            Response.Redirect("day_ticket_spec.aspx");
+            //Response.Redirect("day_ticket_spec.aspx");
         }
 
         protected void special_3_Click(object sender, EventArgs e)
         {
-            Response.Redirect("weekly_ticket_spec.aspx");
+            //Response.Redirect("weekly_ticket_spec.aspx");
         }
 
         protected void special_4_Click(object sender, EventArgs e)
         {
-            Response.Redirect("monthly_ticket_spec.aspx");
+            //Response.Redirect("monthly_ticket_spec.aspx");
 
         }
 
         protected void special_5_Click(object sender, EventArgs e)
         {
-            Response.Redirect("group_ticket_spec.aspx");
+            //Response.Redirect("group_ticket_spec.aspx");
         }
 
 

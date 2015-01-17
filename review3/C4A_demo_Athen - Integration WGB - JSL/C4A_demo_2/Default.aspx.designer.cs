@@ -301,13 +301,13 @@ namespace C4A_demo_2 {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl label_25;
         
         /// <summary>
-        /// HyperLinkC-Steuerelement
+        /// GPII_button-Steuerelement
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
         /// Um dies zu ändern, verschieben Sie die Felddeklaration aus der Designerdatei in eine Code-Behind-Datei.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton HyperLinkC;
+        protected global::System.Web.UI.WebControls.LinkButton GPII_button;
         
         /// <summary>
         /// label_27-Steuerelement

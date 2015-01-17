@@ -120,8 +120,8 @@
         <asp:LinkButton runat="server" id="DesignSwitch"  CssClass="button_eng_normal_eservice" 
                      OnClick="DesignSwitch_Click"><div runat="server" id="label_25" style="position: relative; left:-8px;" >e-Service</div></asp:LinkButton> 
                     
-        <asp:LinkButton runat="server" id="HyperLinkC"    CssClass="button_eng_normal_c4a" 
-                    onclick="btnAsynchPostback_Click"><asp:Label runat="server" id="label_27" style="position: relative; left:-8px;">Cloud4All</asp:Label></asp:LinkButton>   
+        <asp:LinkButton runat="server" id="GPII_button"    CssClass="button_eng_normal_c4a" 
+                    onclick="GPII_button_Click"><asp:Label runat="server" id="label_27" style="position: relative; left:-8px;">Cloud4All</asp:Label></asp:LinkButton>   
         
         <asp:LinkButton runat="server" id="touristbutton"  
                     CssClass="button_hoch_normal_touristen" 

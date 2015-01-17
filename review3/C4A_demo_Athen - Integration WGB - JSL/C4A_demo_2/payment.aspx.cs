@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Demo_GPII_Adapter;
+using System;
 using System.Collections;
 using System.Configuration;
 using System.Data;
@@ -98,17 +99,22 @@ namespace C4A_demo_2
         }
 
 
-        protected void timeout_ticker_Tick(object sender, EventArgs e)
-        {
-            Global.current_language = "de";
-            Global.current_fontface = "Calibri";
-            Global.current_theme = "normal";
-            Global.set_timeout("normal");
+         protected void navigate_ahead_Click(object sender, EventArgs e)
+         {
+             
+         }
 
-            Server.Transfer("Default.aspx");
-        }
+         protected void timeout_ticker_Tick(object sender, EventArgs e)
+         {
+             Global.current_language = "de";
+             Global.current_fontface = "Calibri";
+             Global.current_theme = "normal";
+             Global.set_timeout("normal");
 
-        protected void ccl_Click(object sender, EventArgs e)
+             Server.Transfer("Default.aspx");
+         }
+
+         protected void ccl_Click(object sender, EventArgs e)
         {
             Global.ticket.reset();
             Response.Redirect("Default.aspx");
