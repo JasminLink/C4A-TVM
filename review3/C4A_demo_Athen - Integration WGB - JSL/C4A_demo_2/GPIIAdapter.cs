@@ -31,10 +31,12 @@ namespace Demo_GPII_Adapter
             
             if (url_to_flowmanager == TVMSettings.url_to_online_FlowManager)
             {
+                userToken = GPIIAdapter.transform_to_review3_tvmTokens(userToken);
                 tvmSettings = queryFlowManager(userToken, TVMSettings.url_to_online_FlowManager);
             }
             else if (url_to_flowmanager == TVMSettings.url_to_local_cloudbased_FlowManager)
             {
+                userToken = GPIIAdapter.transform_to_review3_tvmTokens(userToken);
                 tvmSettings = queryFlowManager(userToken, TVMSettings.url_to_local_cloudbased_FlowManager);
             }
             else
@@ -44,6 +46,35 @@ namespace Demo_GPII_Adapter
 
             tvmSettings = print_and_default_TVMSettings(tvmSettings);
             return tvmSettings;
+        }
+
+
+        // This method is made only for not having to remake the bar codes on the cards for the review 3
+        // NP sets are called tvm_xxx while the cards show token xxx
+        public static String transform_to_review3_tvmTokens(String scannedToken)
+        {
+
+            
+            if (scannedToken.Contains("sammy"))
+            {
+                return "tvm_sammy";
+            }
+            else if (scannedToken.Contains("lara"))
+            {
+                return "tvm_lara";
+            }
+            else if (scannedToken.Contains("jasmin"))
+            {
+                return "tvm_valdimir"; ;
+            }
+            else if (scannedToken.Contains("vladimir"))
+            {
+                return "tvm_valdimir";
+            }
+            else
+            {
+                return "logout";
+            }
         }
 
 

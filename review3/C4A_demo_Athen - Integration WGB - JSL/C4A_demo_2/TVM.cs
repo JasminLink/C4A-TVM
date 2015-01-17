@@ -5,15 +5,18 @@ namespace Demo_GPII_Adapter {
     public class TVM
     {
 
-        static String flowManager = TVMSettings.url_to_emulated_FlowManager;
-        //static String flowManager = TVMSettings.url_to_local_cloudbased_FlowManager;
+        //static String flowManager = TVMSettings.url_to_emulated_FlowManager;
+        static String flowManager = TVMSettings.url_to_local_cloudbased_FlowManager;
         //static String flowManager = TVMSettings.url_online_FlowManager;
 
-        //static Boolean scanner = TVMSettings.emulateScanner;
-        static Boolean scanner = TVMSettings.doNotEmulateScanner;
+        //static Boolean emulateScanner = true;
+        static Boolean emulateScanner = false;
 
-        static Boolean printer = TVMSettings.emulatePrinter;
-        //static Boolean printer = TVMSettings.doNotemulatePrinter;
+        //static Boolean emulatePrinter = true;
+        static Boolean emulatePrinter = false;
+
+        static String printerType = TVMSettings.mobilePrinter;
+        //static String printerType = TVMSettings.built_in_printer;
 
         public TVM()
         {
@@ -21,7 +24,8 @@ namespace Demo_GPII_Adapter {
 
         public static TVMSettings listenForUser()
         {
-            TVMSettings ts = UPOSAdapter.listenForUser(flowManager, scanner);
+            Console.WriteLine("TVM.listenForUser( FM: " + flowManager + ", emulate" + emulateScanner);
+            TVMSettings ts = UPOSAdapter.listenForUser(flowManager, emulateScanner);
             return ts;
         }
 
@@ -32,10 +36,11 @@ namespace Demo_GPII_Adapter {
             return true;
         }
 
-        public static Boolean printTicket(string ticketTyp, string Start, string Ziel, string Preis, string Datum, string Person)
+        public static Boolean printTicket(string ticketType, string special, string destination, string price, string person)
         {
 
-            UPOSAdapter.printTicket(ticketTyp, Start, Ziel, Preis, Datum, Person, printer);
+            Console.WriteLine("TVM.printTicket( emulatePrinter" + emulatePrinter);
+            UPOSAdapter.printTicket(ticketType, special, destination, price, person, printerType, emulatePrinter);
 
             //ToDo: give back if ticket was printed successfully
             return true;

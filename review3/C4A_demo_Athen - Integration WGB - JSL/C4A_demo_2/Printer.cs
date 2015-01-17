@@ -6,6 +6,7 @@ using Microsoft.PointOfService;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
+using Demo_GPII_Adapter;
 
 
 
@@ -87,7 +88,7 @@ public class Printer
 
         }
 
-        if (printerType == "mobile_printer")
+        if (printerType == TVMSettings.mobilePrinter)
         {
             //Orte der verschiedenen Textboxen auf dem Ticket:
             PointF logoLocation = new PointF(110, 10);

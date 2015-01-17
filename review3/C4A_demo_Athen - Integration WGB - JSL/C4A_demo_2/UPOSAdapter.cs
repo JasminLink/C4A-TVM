@@ -11,8 +11,6 @@ namespace Demo_GPII_Adapter
     class UPOSAdapter
     {
 
-        private PosExplorer explorer;
-        
         
         public static TVMSettings listenForUser(String flowManager, Boolean emulateScanner)
         {
@@ -22,17 +20,22 @@ namespace Demo_GPII_Adapter
             {
                 //userToken = "sammy";
                 userToken = UPOSAdapter.generateRandomTestToken();
+                Console.WriteLine("UPOSAdapter.generateRandomTestToken(" + userToken + ");");
             }
             else
             {
                 if (UPOSAdapter.checkForScanner())
                 {
+                    Console.Write("scanner detected  ");
                     IDScanner scanner = new IDScanner();
                     userToken = scanner.scan();
+                    Console.WriteLine("scanned userToken " + userToken);
+
                 }
                 else
                 {
                     // do nothing, but better tell user/log there is no scanner
+                    Console.WriteLine("NO SCANNER detected");
                 }
             }
             
@@ -74,7 +77,7 @@ namespace Demo_GPII_Adapter
             return userTokens[u];
         }
 
-        public static void printTicket(string ticketTyp, string Start, string Ziel, string Preis, string Datum, string Person, Boolean emulatePrinter)
+        public static void printTicket(string ticketType, string special, string destination, string price, string person, string printerType, Boolean emulatePrinter)
         {
             if (emulatePrinter)
             {
@@ -84,14 +87,17 @@ namespace Demo_GPII_Adapter
             {
                 if (checkForPrinter())
                 {
+                    Console.Write("printer detected  ");
                     // ToDo: move generateTicket to UPOS Adapter??  as ticket can be generated and displayed even though there is not a printer
-                    Bitmap ticket = Printer.generateTicket(ticketTyp, Start, Ziel, Preis, Datum, Person);
+                    Bitmap ticket = Printer.generateTicket(ticketType, special, destination, price, person, printerType);
                     Printer printer = new Printer();
                     printer.printTicket(ticket);
+                    Console.WriteLine("printing " + ticketType + ", " + special + ", " + destination + ", " + price + ", " + person + ", " + printerType);
                 }
                 else
                 {
                     // do nothing, but better tell user/log there is no printer
+                    Console.WriteLine("NO PRINTER detected");
                 }
             }
         }

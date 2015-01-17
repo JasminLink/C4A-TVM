@@ -17,11 +17,9 @@ namespace Demo_GPII_Adapter
         public const String url_to_local_cloudbased_FlowManager = "http://127.0.0.1:8081/";
         public const String url_to_emulated_FlowManager = "emulate";
         
-        public const Boolean emulateScanner = true;
-        public const Boolean doNotEmulateScanner = false;
-        public const Boolean emulatePrinter = true;
-        public const Boolean doNotEmulatePrinter = false;
-        
+        public const String mobilePrinter = "mobile_printer";
+        public const String built_in_printer = "built_in_printer";
+
 
         [JsonProperty(GPII_solution_id)]
         public TVMPreferences TVMPreferences { get; set; }
