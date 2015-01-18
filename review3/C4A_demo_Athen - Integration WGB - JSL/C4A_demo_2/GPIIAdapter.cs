@@ -233,10 +233,10 @@ namespace Demo_GPII_Adapter
 
                     contrastTheme = "yellow-black",
                     fontSize = "big",
-                    fontFace = "Comic Sans",
+                    fontFace = "default",
                     buttonSize = "big",
                     timeOut = "default",
-                    language = "de"
+                    language = "en"
                 };
             } 
             else

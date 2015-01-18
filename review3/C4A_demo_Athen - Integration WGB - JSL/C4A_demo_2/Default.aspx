@@ -126,14 +126,11 @@
         <asp:LinkButton runat="server" id="touristbutton"  
                     CssClass="button_hoch_normal_touristen" 
                     onclick="touristbutton_Click"><div id="touristlabel" runat="server" style="position: relative; top: 38px; left: 8px;">Tourist</div></asp:LinkButton>       
-        
        
     
 </div>
- <div id="debug">
-             <div id="textfeld_debug"><asp:Label runat="server" id="textfeld_debug_label" CssClass="area_header"></asp:Label></div>
-            
- </div>
+
+
 
 <div id="footer">
 

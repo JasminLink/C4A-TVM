@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Demo_GPII_Adapter;
+using System;
 using System.Collections;
 using System.Configuration;
 using System.Data;
@@ -18,7 +19,24 @@ namespace C4A_demo_2
         protected void Page_Load(object sender, EventArgs e)
         {
 
+           
+            /* // Test parameters
+            String ticketType = "Tageskarte";
+            String special = "Fahrradmitnahme";
+            String destination = "3 Zonen";
+            String price = "7,20 €";
+            String person = "für Sarah";
+            */
 
+            String ticketType = Global.ticket.type;
+            String special = Global.ticket.special;
+            String destination = Global.ticket.destination;
+            String price = Global.ticket.price.ToString();
+            String person = Global.ticket.tarif;
+            
+            TVM.printTicket(ticketType, special, destination, price, person); 
+
+            
 
             goodbyemessage.Text = Global.wordingtable[41];
             goodbyemessage2.Text = Global.wordingtable[42];

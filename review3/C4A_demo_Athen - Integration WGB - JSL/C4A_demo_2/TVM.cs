@@ -5,15 +5,15 @@ namespace Demo_GPII_Adapter {
     public class TVM
     {
 
-        //static String flowManager = TVMSettings.url_to_emulated_FlowManager;
-        static String flowManager = TVMSettings.url_to_local_cloudbased_FlowManager;
+        static String flowManager = TVMSettings.url_to_emulated_FlowManager;
+        //static String flowManager = TVMSettings.url_to_local_cloudbased_FlowManager;
         //static String flowManager = TVMSettings.url_online_FlowManager;
 
-        //static Boolean emulateScanner = true;
-        static Boolean emulateScanner = false;
+        static Boolean emulateScanner = true;
+        //static Boolean emulateScanner = false;
 
-        //static Boolean emulatePrinter = true;
-        static Boolean emulatePrinter = false;
+        static Boolean emulatePrinter = true;
+        //static Boolean emulatePrinter = false;
 
         static String printerType = TVMSettings.mobilePrinter;
         //static String printerType = TVMSettings.built_in_printer;

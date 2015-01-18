@@ -63,49 +63,17 @@ namespace C4A_demo_2
 
         protected void btnAsynchPostback_Click(object sender, EventArgs e)
         {
-            Global.current_theme = "contrast";
-            // Global.current_fontface = "Comic Sans MS";
-            // applyFontFace_clientside(Global.current_fontface);
-            // serverside_apply_style(Global.current_theme);
-            
-            // runjQueryCode("$('.button_contrast').switchClass('button_contrast','button_crazy','slow');$('.button_crazy').switchClass('button_crazy','button_contrast','fast');");
-            runjQueryCode("$('.startseite_C4A').switchClass('startseite_C4A','startseite_C4A_contrast','slow');");
-            runjQueryCode("$('.time').switchClass('time','time_contrast','slow');");
-            // HyperLink4.CssClass = "button_contrast";
-            runjQueryCode("$('.area_header').switchClass('area_header','area_header_contrast','slow');");
-            runjQueryCode("$('.zeiticon').switchClass('zeiticon','zeiticon_contrast','slow');");
-            runjQueryCode("$('.button_normal').switchClass('button_normal','button_contrast','slow');");
-            runjQueryCode("$('.button_eng_normal_eservice').switchClass('button_eng_normal_eservice','button_eng_contrast_eservice','slow');");
-            runjQueryCode("$('.button_eng_normal').switchClass('button_eng_normal','button_eng_contrast','slow');");
-            runjQueryCode("$('.button_hoch_normal').switchClass('button_hoch_normal','button_hoch_contrast','slow');");
-            runjQueryCode("$('.button_eng_normal_c4a').switchClass('button_eng_normal_c4a','button_eng_contrast_c4a','slow');");
-            runjQueryCode("$('.button_hoch_normal_touristen').switchClass('button_hoch_normal_touristen','button_hoch_contrast_touristen','slow');");
-            
         }
 
         protected void HyperLinkB_Click(object sender, EventArgs e)
         {
-            Global.current_theme = "contrast";
-            // serverside_apply_style(Global.current_theme);
-            
-            // runjQueryCode("$('.button_contrast').switchClass('button_contrast','button_crazy','slow');$('.button_crazy').switchClass('button_crazy','button_contrast','fast');");
-            runjQueryCode("$('.startseite_C4A').switchClass('startseite_C4A','startseite_C4A_contrast','slow');");
-            runjQueryCode("$('.zeiticon').switchClass('zeiticon','zeiticon_contrast','slow');");
-            runjQueryCode("$('.time').switchClass('time','time_contrast','slow');");
-            runjQueryCode("$('.button_eng_normal_c4a').switchClass('button_eng_normal_c4a','button_eng_contrast_c4a','slow');");
-            runjQueryCode("$('.button_normal').switchClass('button_normal','button_contrast','slow');");
-            runjQueryCode("$('.button_eng_normal_eservice').switchClass('button_eng_normal_eservice','button_eng_contrast_eservice','slow');");
-            runjQueryCode("$('.button_eng_normal').switchClass('button_eng_normal','button_eng_contrast','slow');");
-            runjQueryCode("$('.button_hoch_normal').switchClass('button_hoch_normal','button_hoch_contrast','slow');");
-            runjQueryCode("$('.button_hoch_normal_touristen').switchClass('button_hoch_normal_touristen','button_hoch_contrast_touristen','slow');");
-            runjQueryCode("$('.area_header').switchClass('area_header','area_header_contrast','slow');");
         }
 
 
         protected void GPII_button_Click(object sender, EventArgs e)
         {
-            textfeld_debug_label.Text = "GPII_button_Click";
-            /*TVMSettings ts = TVM.listenForUser();
+            
+            TVMSettings ts = TVM.listenForUser();
             String settings = "";
             settings = settings + "\"" + ts.TVMPreferences.userToken + "\" ";
             settings = settings + "\"" + ts.TVMPreferences.contrastTheme + "\" ";
@@ -113,46 +81,20 @@ namespace C4A_demo_2
             settings = settings + "\"" + ts.TVMPreferences.fontFace + "\" ";
             settings = settings + "\"" + ts.TVMPreferences.buttonSize + "\" ";
             settings = settings + "\"" + ts.TVMPreferences.timeOut + "\" ";
-            settings = settings + "\"" + ts.TVMPreferences.language + "\" ";
-            textfeld_debug_label.Text = settings;
-
-            textfeld_debug_label.Text= Global.ticket.type + Global.ticket.special + Global.ticket.destination + Global.ticket.price.ToString() + Global.ticket.tarif;
-            */
-            TVMSettings ts = TVM.listenForUser();
-            invoke_Settings(ts);
-
-
-            String ticketType = "Tageskarte";
-            String special = "Fahrradmitnahme";
-            String destination = "3 Zonen";
-            String price = "7,20 €";
-            String person = "für Sarah";
-            TVM.printTicket(ticketType, special, destination, price, person); 
-
-            textfeld_debug_label.Text = (ticketType + special + destination + price + person);
+            settings = settings + "\"" + ts.TVMPreferences.language + "\"";
             
-            //invoke_Settings(ts);
+            // debug label for testing
+            // put into Default.aspx, before footer ~line 134
+            // <div id="debug"><div id="textfeld_debug"><asp:Label runat="server" id="textfeld_debug_label" CssClass="area_header"></asp:Label></div>
+           //  textfeld_debug_label.Text = settings;
+
+
+            invoke_Settings(ts);
 
         }
 
         protected void HyperLinkC_Click(object sender, EventArgs e)
         {
-        }
-         
-        protected void ani_normal_to_contrast()
-        {
-            // runjQueryCode("$('.button_contrast').switchClass('button_contrast','button_crazy','slow');$('.button_crazy').switchClass('button_crazy','button_contrast','fast');");
-            runjQueryCode("$('.startseite_C4A').switchClass('startseite_C4A','startseite_C4A_contrast','slow');");
-            runjQueryCode("$('.area_header').switchClass('area_header','area_header_contrast','slow');");
-            runjQueryCode("$('.zeiticon').switchClass('zeiticon','zeiticon_contrast','slow');");
-            runjQueryCode("$('.time').switchClass('time','time_contrast','slow');");
-            runjQueryCode("$('.button_normal').switchClass('button_normal','button_contrast','slow');");
-            runjQueryCode("$('.button_eng_normal_eservice').switchClass('button_eng_normal_eservice','button_eng_contrast_eservice','slow');");
-            runjQueryCode("$('.button_eng_normal').switchClass('button_eng_normal','button_eng_contrast','slow');");
-            runjQueryCode("$('.button_hoch_normal').switchClass('button_hoch_normal','button_hoch_contrast','slow');");
-            runjQueryCode("$('.button_hoch_normal_touristen').switchClass('button_hoch_normal_touristen','button_hoch_contrast_touristen','slow');");
-            runjQueryCode("$('.button_eng_normal_c4a').switchClass('button_eng_normal_c4a','button_eng_contrast_c4a','slow');");
-
         }
 
         protected void DesignSwitch_Click(object sender, EventArgs e)
@@ -160,17 +102,20 @@ namespace C4A_demo_2
 
         }
 
+
+
         protected void invoke_Settings(TVMSettings ts)
         {
 
             //contrast theme
             if (ts.TVMPreferences.contrastTheme == "yellow-black"){
                 Global.current_theme = "contrast";
-                //ani_normal_to_contrast();
+                ani_normal_to_contrast();
             }
             else
             {
                 Global.current_theme = "normal";
+                ani_contrast_to_normal();
             }
             //serverside_apply_style(Global.current_theme);
 
@@ -215,7 +160,37 @@ namespace C4A_demo_2
 
             Response.Redirect("Default.aspx");
         }
-        
+
+        protected void ani_normal_to_contrast()
+        {
+            runjQueryCode("$('.startseite_C4A').switchClass('startseite_C4A','startseite_C4A_contrast','slow');");
+            runjQueryCode("$('.area_header').switchClass('area_header','area_header_contrast','slow');");
+            runjQueryCode("$('.zeiticon').switchClass('zeiticon','zeiticon_contrast','slow');");
+            runjQueryCode("$('.time').switchClass('time','time_contrast','slow');");
+            runjQueryCode("$('.button_normal').switchClass('button_normal','button_contrast','slow');");
+            runjQueryCode("$('.button_eng_normal_eservice').switchClass('button_eng_normal_eservice','button_eng_contrast_eservice','slow');");
+            runjQueryCode("$('.button_eng_normal').switchClass('button_eng_normal','button_eng_contrast','slow');");
+            runjQueryCode("$('.button_hoch_normal').switchClass('button_hoch_normal','button_hoch_contrast','slow');");
+            runjQueryCode("$('.button_hoch_normal_touristen').switchClass('button_hoch_normal_touristen','button_hoch_contrast_touristen','slow');");
+            runjQueryCode("$('.button_eng_normal_c4a').switchClass('button_eng_normal_c4a','button_eng_contrast_c4a','slow');");
+
+        }
+
+        protected void ani_contrast_to_normal()
+        {
+            runjQueryCode("$('.startseite_C4A_contrast').switchClass('startseite_C4A_contrast','startseite_C4A','slow');");
+            runjQueryCode("$('.area_header_contrast').switchClass('area_header_contrast','area_header','slow');");
+            runjQueryCode("$('.zeiticon_contrast').switchClass('zeiticon_contrast','zeiticon','slow');");
+            runjQueryCode("$('.time_contrast').switchClass('time_contrast','time','slow');");
+            runjQueryCode("$('.button_contrast').switchClass('button_contrast','button_normal','slow');");
+            runjQueryCode("$('.button_eng_contrast_eservice').switchClass('button_eng_contrast_eservice','button_eng_normal_eservice','slow');");
+            runjQueryCode("$('.button_eng_contrast').switchClass('button_eng_contrast','button_eng_normal','slow');");
+            runjQueryCode("$('.button_hoch_contrast').switchClass('button_hoch_contrast','button_hoch_normal','slow');");
+            runjQueryCode("$('.button_hoch_contrast_touristen').switchClass('button_hoch_contrast_touristen','button_hoch_normal_touristen','slow');");
+            runjQueryCode("$('.button_eng_normal_c4a_contrast').switchClass('button_eng_normal_c4a_contrast','button_eng_normal_c4a','slow');");
+
+        }
+
 
 
         public void setfontsize(int size)
@@ -267,14 +242,14 @@ namespace C4A_demo_2
             applyFontFace_clientside(Global.current_fontface);
             applyLanguage(Global.current_language);
 
-            
 
-            if (Global.current_language.Contains("de")) lang_button_de.CssClass = "language_button_de_pressed";
-            if (Global.current_language.Contains("en")) lang_button_en.CssClass = "language_button_en_pressed";
-            if (Global.current_language.Contains("fr")) lang_button_fr.CssClass = "language_button_fr_pressed";
-            if (Global.current_language.Contains("es")) lang_button_es.CssClass = "language_button_es_pressed";
-            if (Global.current_language.Contains("it")) lang_button_it.CssClass = "language_button_it_pressed";
-            if (Global.current_language.Contains("gr")) lang_button_gr.CssClass = "language_button_gr_pressed";
+
+            if (Global.current_language.Contains("de")) lang_button_de_Click(sender,e);
+            if (Global.current_language.Contains("en")) lang_button_en_Click(sender, e);
+            if (Global.current_language.Contains("fr")) lang_button_fr_Click(sender, e);
+            if (Global.current_language.Contains("es")) lang_button_es_Click(sender, e);
+            if (Global.current_language.Contains("it")) lang_button_it_Click(sender, e);
+            if (Global.current_language.Contains("gr")) lang_button_gr_Click(sender, e);
         }
 
         protected void timeout_ticker_Tick(object sender, EventArgs e)

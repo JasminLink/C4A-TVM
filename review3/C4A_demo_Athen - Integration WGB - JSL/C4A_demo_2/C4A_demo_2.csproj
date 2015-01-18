@@ -99,6 +99,7 @@
     <Content Include="engine1\triangle.png" />
     <Content Include="engine1\wowslider.js" />
     <Content Include="engine1\wowslider.mod.js" />
+    <Content Include="goodbye.aspx" />
     <Content Include="group_ticket_spec.aspx" />
     <Content Include="helper.js" />
     <Content Include="Global.asax" />
@@ -120,6 +121,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommandLine.cs" />
+    <Compile Include="goodbye.aspx.cs">
+      <DependentUpon>goodbye.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="goodbye.aspx.designer.cs">
+      <DependentUpon>goodbye.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GPIIAdapter.cs" />
     <Compile Include="Printer.cs" />
     <Compile Include="IDScanner.cs" />

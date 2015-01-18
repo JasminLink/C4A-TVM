@@ -337,15 +337,6 @@ namespace C4A_demo_2 {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl touristlabel;
         
         /// <summary>
-        /// textfeld_debug_label-Steuerelement
-        /// </summary>
-        /// <remarks>
-        /// Automatisch generiertes Feld
-        /// Um dies zu ändern, verschieben Sie die Felddeklaration aus der Designerdatei in eine Code-Behind-Datei.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label textfeld_debug_label;
-        
-        /// <summary>
         /// lang_button_de-Steuerelement
         /// </summary>
         /// <remarks>
