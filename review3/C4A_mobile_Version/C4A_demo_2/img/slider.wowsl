@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VisualLightBox>
+    <Gallery version="2.5">
+        <Settings>
+            <AppName>WOW Slider</AppName>
+            <AppUrlS>WOWSlider.com</AppUrlS>
+            <AppVersion>7.2</AppVersion>
+            <AutoPlay>true</AutoPlay>
+            <AutoPlayVideo>false</AutoPlayVideo>
+            <Captions>true</Captions>
+            <CaptionsEffect>parallax</CaptionsEffect>
+            <Controls>true</Controls>
+            <FullScreen>false</FullScreen>
+            <GalleryName>slider</GalleryName>
+            <GallerySuffix>1</GallerySuffix>
+            <HtmlCharset>UTF-8</HtmlCharset>
+            <ImageAspectRatio>true</ImageAspectRatio>
+            <ImageEffect>fade</ImageEffect>
+            <ImageFillColor>#000000</ImageFillColor>
+            <ImageHeight>386</ImageHeight>
+            <ImageQuality>90</ImageQuality>
+            <ImageShrink2>true</ImageShrink2>
+            <ImageStretch>true</ImageStretch>
+            <ImageTemplate>C:/Program Files (x86)/WOW Slider/templates/backgnd/mellow/</ImageTemplate>
+            <ImageTemplateName>Mellow</ImageTemplateName>
+            <ImageWidth>554</ImageWidth>
+            <Images>true</Images>
+            <JoomlaType>2.5</JoomlaType>
+            <OneLoop>false</OneLoop>
+            <OrderRandom>false</OrderRandom>
+            <PlayPause>true</PlayPause>
+            <Preloader>false</Preloader>
+            <PublishFileName>C:/Users/wbeinhau/Desktop/wow slider.html</PublishFileName>
+            <PublishIndex>wow slider.html</PublishIndex>
+            <PublishPath>C:/Users/wbeinhau/Desktop</PublishPath>
+            <PublishPreview>true</PublishPreview>
+            <PublishType>file</PublishType>
+            <RelativePath>false</RelativePath>
+            <ShowBullets>1</ShowBullets>
+            <ShowControls>false</ShowControls>
+            <ShowTooltips>1</ShowTooltips>
+            <SizeStyle>1</SizeStyle>
+            <SlideshowDelay>58</SlideshowDelay>
+            <SlideshowDuration>20</SlideshowDuration>
+            <SoundEnable>0</SoundEnable>
+            <SoundFileName></SoundFileName>
+            <StopOnHover>false</StopOnHover>
+            <SwipeSupport>2</SwipeSupport>
+            <TemplateFont>Tahoma</TemplateFont>
+            <TemplateName>mellow</TemplateName>
+            <ThumbAlign>bottom</ThumbAlign>
+            <ThumbFormat>jpg</ThumbFormat>
+            <ThumbHeight>48</ThumbHeight>
+            <ThumbQuality>90</ThumbQuality>
+            <ThumbWidth>0</ThumbWidth>
+            <Thumbnails>false</Thumbnails>
+            <TooltipPos>bottom</TooltipPos>
+            <noFrame>0</noFrame>
+        </Settings>
+        <Images RelativePath="false">
+            <Image>
+                <url>C:/Users/wbeinhau/Dropbox/Automaten/C4a/C4A_demo_2/C4A_demo_2/img/allianz_arena_s.jpg</url>
+                <title>allianz_arena_s</title>
+                <filesize>280204</filesize>
+            </Image>
+            <Image>
+                <url>C:/Users/wbeinhau/Dropbox/Automaten/C4a/C4A_demo_2/C4A_demo_2/img/alpenpanorama_s.jpg</url>
+                <title>alpenpanorama_s</title>
+                <filesize>292934</filesize>
+            </Image>
+            <Image>
+                <url>C:/Users/wbeinhau/Dropbox/Automaten/C4a/C4A_demo_2/C4A_demo_2/img/hofbraeuhaus_s.jpg</url>
+                <title>hofbraeuhaus_s</title>
+                <filesize>260476</filesize>
+            </Image>
+            <Image>
+                <url>C:/Users/wbeinhau/Dropbox/Automaten/C4a/C4A_demo_2/C4A_demo_2/img/marienplatz_s.jpg</url>
+                <title>marienplatz_s</title>
+                <filesize>253941</filesize>
+            </Image>
+        </Images>
+    </Gallery>
+</VisualLightBox>

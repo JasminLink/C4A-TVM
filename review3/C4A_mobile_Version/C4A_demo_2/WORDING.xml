@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="WORDING.xsd" generated="2014-11-26T18:07:49">
+<WORDING>
+<ID>1</ID>
+<de>Alle Fahrkarten</de>
+<en>All Tickets</en>
+<fr>Tous les billets</fr>
+<gr>Όλα τα εισιτήρια</gr>
+<es>Todas billetes</es>
+<it>Tutti i biglietti</it>
+</WORDING>
+<WORDING>
+<ID>2</ID>
+<de>MVG Bereich</de>
+<en>MVG Area</en>
+<fr>Zone MVG</fr>
+<gr>Ζώνη MVG</gr>
+  <es>Zona MVG</es>
+<it>Zona MVG</it>
+</WORDING>
+<WORDING>
+<ID>3</ID>
+<de>Häufige Ziele</de>
+<en>Frequent Destinations</en>
+<fr>Destinations fréquentes</fr>
+  <gr>Συχνοί προορισμοί</gr>
+  <es>Destinos frecuentes</es>
+  <it>Destinazioni frequenti</it>
+</WORDING>
+<WORDING>
+<ID>4</ID>
+<de>Fahrkartenkauf</de>
+<en>Buy Tickets</en>
+<fr>Achat de billets</fr>
+<gr>Αγορά εισιτηρίου</gr>
+  <es>Compra de bilettes</es>
+<it>Acquisto di biglietti</it>
+</WORDING>
+<WORDING>
+<ID>5</ID>
+<de>Einzelfahrkarte</de>
+<en>Single Ticket</en>
+<fr>Billet simple</fr>
+  <gr>Ένα εισιτήριο</gr>
+  <es>Billete de ida</es>
+  <it>Biglietto singolo</it>
+</WORDING>
+<WORDING>
+<ID>6</ID>
+<de>Tageskarte</de>
+<en>Day Ticket</en>
+<fr>Billet journalière</fr>
+  <gr>Ημερήσιο εισιτήριο</gr>
+  <es>Billete diario</es>
+  <it>Biglietto giornaliero</it>
+</WORDING>
+<WORDING>
+<ID>7</ID>
+<de>Andere Fahrkarten</de>
+<en>Other Tickets</en>
+<fr>Autres billets</fr>
+  <gr>Άλλο εισιτήριο</gr>
+  <es>Otras billetes</es>
+  <it>Altri biglietti</it>
+</WORDING>
+<WORDING>
+<ID>8</ID>
+<de>Zielhaltestelle</de>
+<en>Search Destination</en>
+<fr>Chercher destinat.</fr>
+<gr>Αναζήτηση </gr>
+  <es>Buscar destino</es>
+<it>Cerca destinaz.</it>
+</WORDING>
+<WORDING>
+<ID>9</ID>
+<de>Zielwahl</de>
+<en>Choose your destination</en>
+<fr>Choix des destinations</fr>
+<gr>Επιλογή προορισμού</gr>
+  <es>Cómo Destinos</es>
+<it>Scelta degli destinazioni</it>
+</WORDING>
+<WORDING>
+<ID>10</ID>
+<de>Zieleingabe</de>
+<en>Enter your destination</en>
+<fr>Entree de destination</fr>
+<gr>Εισαγωγή προορισμού</gr>
+  <es>Introduzca el destino</es>
+<it>Inserite destinazione</it>
+</WORDING>
+<WORDING>
+<ID>11</ID>
+<de>Löschen!</de>
+<en>Clear!</en>
+<fr>Effacer!</fr>
+  <gr>Διαγραφή!</gr>
+  <es>Cancelar</es>
+  <it>Cancellare</it>
+</WORDING>
+<WORDING>
+<ID>12</ID>
+<de>Leerzeichen</de>
+<en>Space</en>
+<fr>Espace</fr>
+  <gr>Κενό</gr>
+  <es>Espacio</es>
+  <it>Spazio</it>
+</WORDING>
+<WORDING>
+<ID>13</ID>
+<de>Abbrechen</de>
+<en>Cancel</en>
+<fr>Annuler</fr>
+<gr>Ακύρωση </gr>
+  <es>Cancelar</es>
+  <it>Cancellare</it>
+</WORDING>
+<WORDING>
+<ID>14</ID>
+<de>Bitte wählen Sie Ihre Fahrkarte</de>
+<en>Please choose your ticket</en>
+<fr>Choississez votre billet</fr>
+  <gr>Παρακαλώ επιλέξτε το εισιτήριό σας</gr>
+  <es>¡Elige tus billetes</es>
+  <it>Selezionate il vostro biglietto</it>
+</WORDING>
+<WORDING>
+<ID>15</ID>
+<de>Ihre Fahrkarte</de>
+<en>Your Ticket</en>
+<fr>Votre billet</fr>
+<gr>Το εισιτήριό σας</gr>
+  <es>Su billete</es>
+  <it>Vostro biglietto</it>
+</WORDING>
+<WORDING>
+<ID>16</ID>
+<de>Nach</de>
+<en>To</en>
+<fr>À destination de</fr>
+<gr>Προς </gr>
+  <es>El ir a</es>
+  <it>Andando a</it>
+</WORDING>
+<WORDING>
+<ID>17</ID>
+<de>Gesamtpreis</de>
+<en>Fare</en>
+<fr>Prix total</fr>
+<gr>Κόμιστρο </gr>
+  <es>Precio total</es>
+  <it>Prezzo totale</it>
+</WORDING>
+<WORDING>
+<ID>18</ID>
+<de>Ermäßigung</de>
+<en>Reduction</en>
+<fr>Reduction</fr>
+<gr>Μειωμένο εισιτήριο</gr>
+  <es>Reducción</es>
+  <it>Riduzione</it>
+</WORDING>
+<WORDING>
+<ID>19</ID>
+<de>Normaltarif</de>
+<en>Full Rate</en>
+<fr>Tarif normal</fr>
+<gr>Κανονικό εισιτήριο</gr>
+  <es>Tarifa normal</es>
+  <it>Tariffa normale</it>
+</WORDING>
+<WORDING>
+<ID>20</ID>
+<de>Ermäßigung Kinder</de>
+<en>Children</en>
+<fr>Tarif enfants</fr>
+<gr>Παιδικό εισιτήριο</gr>
+<es>Reducción niños</es>
+<it>Tariffa bambini</it>
+</WORDING>
+<WORDING>
+<ID>21</ID>
+<de>Zusatzangebote</de>
+<en>Additional Services</en>
+<fr>Services supplémentaires</fr>
+<gr>Πρόσθετες υπηρεσίες</gr>
+<es>Servicios Adicionales</es>
+<it>Servizi supplementari</it>
+</WORDING>
+<WORDING>
+<ID>22</ID>
+<de>Keine</de>
+<en>None</en>
+<fr>Aucune</fr>
+<gr>Καμία</gr>
+  <es>No</es>
+<it>Nessun</it>
+</WORDING>
+<WORDING>
+<ID>23</ID>
+<de>Kein Zusatzangebot</de>
+<en>No additional services</en>
+<fr>Aucun service supplémentaire</fr>
+<gr>Καμία πρόσθετη υπηρεσίες</gr>
+<es>No hay servicios adicionales</es>
+<it>Nessuna offerta aggiuntiva</it>
+</WORDING>
+<WORDING>
+<ID>24</ID>
+<de>Fahrradmitnahme</de>
+<en>Bike transport</en>
+<fr>Transport de vélo</fr>
+<gr>Μετακίν. ποδηλάτου</gr>
+<es>Transp. de bicicl.</es>
+<it>Trasporto bicicl.</it>
+</WORDING>
+<WORDING>
+<ID>25</ID>
+<de>Sie können Ihre Fahrkarte bezahlen oder Änderungen vornehmen</de>
+<en>You can pay your ticket or modify</en>
+<fr>Vous pouvez payer votre billet où le modifier</fr>
+<gr>Παρακαλώ πληρώστε το αντίτιμο του εισιτηρίου σας ή τροποποιήστε το </gr>
+<es>Pagar por su billete que modificar la</es>
+<it>Pagare il biglietto o di modificare</it>
+</WORDING>
+  <WORDING>
+    <ID>26</ID>
+    <de>Streifenkarte</de>
+    <en>Carnet Tickets</en>
+    <fr>Carnet de tickets</fr>
+    <gr>δελτίου Εισιτήρια</gr>
+    <es>Billete de banda</es>
+    <it>Bigliet. 10 viaggi</it>
+  </WORDING>
+  <WORDING>
+    <ID>27</ID>
+    <de>Bitte wählen Sie Ihren Tarif</de>
+    <en>Please choose your tarif</en>
+    <fr>Choississez votre tarif</fr>
+    <gr>Παρακαλώ επιλέξτε το ναύλος σας</gr>
+    <es>Elija su tarifa</es>
+    <it>Scegliete la vostra tariffa</it>
+  </WORDING>
+  <WORDING>
+    <ID>28</ID>
+    <de>-- not defined --</de>
+    <en>-- not defined --</en>
+    <fr>-- not defined --</fr>
+    <gr>-- not defined --</gr>
+    <es>-- not defined --</es>
+    <it>-- not defined --</it>
+  </WORDING>
+  <WORDING>
+    <ID>29</ID>
+    <de>Fahrkarte</de>
+    <en>Ticket</en>
+    <fr>Billet</fr>
+    <gr>εισιτήριο</gr>
+    <es>Billete</es>
+    <it>Biglietto</it>
+  </WORDING>
+  <WORDING>
+    <ID>30</ID>
+    <de>Bitte wählen Sie Ihr Zusatzangebot</de>
+    <en>Please choose your additional services</en>
+    <fr>Choississez votre service supplémentaire</fr>
+    <gr>Παρακαλώ επιλέξτε το πρόσθετη υπηρεσίες</gr>
+    <es>Selecciona tu oferta adicional</es>
+    <it>Selezionare la vostra offerta supplementare</it>
+  </WORDING>
+  <WORDING>
+    <ID>31</ID>
+    <de>Keine</de>
+    <en>None</en>
+    <fr>Aucunes</fr>
+    <gr>Καμία</gr>
+    <es>No</es>
+    <it>Nessuno</it>
+  </WORDING>
+  <WORDING>
+    <ID>32</ID>
+    <de>Entdecken Sie München mit dem Tourist Ticket!</de>
+    <en>Dicover Munich with your tourist ticket!</en>
+    <fr>Découvrez Munich avec votre billet touristique!</fr>
+    <gr>Ανακαλύψτε το Μόναχο με το τουριστικό εισιτήριο σας!</gr>
+    <es>Descubra Mónaco con boleto turístico.</es>
+    <it>Scoprite Monaco con il biglietto turistico!</it>
+  </WORDING>
+  <WORDING>
+    <ID>33</ID>
+    <de>Tourist Ticket</de>
+    <en>Tourist Ticket</en>
+    <fr>Billet Touristique</fr>
+    <gr>τουριστικό εισιτήριο</gr>
+    <es>Billete turísticos</es>
+    <it>Biglietto turistico</it>
+  </WORDING>
+  <WORDING>
+    <ID>34</ID>
+    <de>Tourist Ticket Erwachsene</de>
+    <en>Tourist Ticket Adults</en>
+    <fr>Billet Touristique normal</fr>
+    <gr>τουριστικό εισ. ενήλικες</gr>
+    <es>Billete turísticos normal</es>
+    <it>Biglietto turistico normale</it>
+  </WORDING>
+  <WORDING>
+    <ID>35</ID>
+    <de>Tourist Ticket Kinder</de>
+    <en>Tourist Ticket Children</en>
+    <fr>Billet Touristique enfants</fr>
+    <gr>τουριστικό εισ. παιδιά</gr>
+    <es>Billete turísticos niños</es>
+    <it>Biglietto turistico bambini</it>
+  </WORDING>
+  <WORDING>
+    <ID>36</ID>
+    <de>Entdecken Sie München und begeben Sie sich auf die Reise durch die bayerische Landeshauptstadt. Lassen Sie sich verzaubern und geniessen Sie die Parks, Museen, Biergärten und das Nachtleben - und nutzen Sie dazu soviele MVG-Busse und Bahnen, wie Sie möchten. Volle drei Tage ab Kauf des Tickets!</de>
+    <en>Discover Munich and get on your sightseeing trip to the Bavarian capital. Let yourself be enchanted by the unique athmosphere and enjoy its parks, museums, beer gardens and night life - and use as many MVG busses and trains as you like. For fully three days!</en>
+    <fr>Découvrez Munich et plongez dans la capitale bavaroise. Laissez-vous enchanter par l'athmosphère unique de la ville et profitez de ses parcs, musées, jardins de bière et sa vie nocturne - et utilisez autant de bus et les trains MVG que vous le souhaitez. Pour entièrement en trois jours!</fr>
+    <gr>Ανακαλύψτε το Μόναχο και να προχωρήσουμε στην περιήγηση σας στην πρωτεύουσα της Βαυαρίας. Αφήστε τον εαυτό σας να μαγευτεί από τη μοναδική ατμόσφαιρα  και να απολαύσετε τα πάρκα, μουσεία, κήπους μπύρα και τη νυχτερινή ζωή - και να χρησιμοποιούν ως πολλά λεωφορεία και τα τρένα MVG, όπως σας αρέσει. Για την πλήρη τρεις ημέρες!</gr>
+    <es>Descubra Mónaco y obtener en su viaje de turismo a la capital bávara. Déjese encantar por el ambiente único y disfrutar de sus parques, museos, jardines de cerveza y la vida nocturna - y utilizar como muchos autobuses y trenes MVG como quieras. Durante casi tres días!</es>
+    <it>Scoprite Monaco e fate un viaggio attraverso la capitale bavarese. Sarete incantato e godete  i parchi, musei, birrerie e locali notturni - e raggiungete il maggior numero di autobus e treni MVG, come vi piace. Ben tre giorni dall'acquisto di biglietti!</it>
+  </WORDING>
+  <WORDING>
+    <ID>37</ID>
+    <de>vor</de>
+    <en>forward</en>
+    <fr>avant</fr>
+    <gr>εμπρός</gr>
+    <es>avante</es>
+    <it>avanti</it>
+  </WORDING>
+  <WORDING>
+    <ID>38</ID>
+    <de>zurück</de>
+    <en>back</en>
+    <fr>retour</fr>
+    <gr>πίσω</gr>
+    <es>de vuelta</es>
+    <it>indietro</it>
+  </WORDING>
+  <WORDING>
+    <ID>39</ID>
+    <de>Tourist</de>
+    <en>Tourist</en>
+    <fr>Tourist</fr>
+    <gr>Tourist</gr>
+    <es>Tourist</es>
+    <it>turista</it>
+  </WORDING>
+  <WORDING>
+    <ID>40</ID>
+    <de>Service</de>
+    <en>Service</en>
+    <fr>Service</fr>
+    <gr>υπηρεσία</gr>
+    <es>Servicio</es>
+    <it>Servizio</it>
+  </WORDING>
+  <WORDING>
+    <ID>41</ID>
+    <de>Bitte entnehmen Sie Ihr Ticket!</de>
+    <en>Please take your ticket.</en>
+    <fr>S'il vous plaît, prennez votre billet!</fr>
+    <gr>Παρακαλώ πάρτε tο εισιτήριό σας</gr>
+    <es>Por favor tome su boleto</es>
+    <it>Si prega di prendere il biglietto</it>
+  </WORDING>
+  <WORDING>
+    <ID>42</ID>
+    <de>Wir wünschen Ihnen eine gute Fahrt!</de>
+    <en>Have a good trip!</en>
+    <fr>Bonne route!</fr>
+    <gr>Καλό ταξίδι</gr>
+    <es>Le deseamos un buen viaje</es>
+    <it>Vi auguriamo un buon viaggio!</it>
+  </WORDING>
+</dataroot>
