@@ -105,7 +105,7 @@ namespace C4A_demo_2
         protected void GPII_button_Click(object sender, EventArgs e)
         {
             textfeld_debug_label.Text = "GPII_button_Click";
-            TVMSettings ts = TVM.listenForUser();
+            /*TVMSettings ts = TVM.listenForUser();
             String settings = "";
             settings = settings + "\"" + ts.TVMPreferences.userToken + "\" ";
             settings = settings + "\"" + ts.TVMPreferences.contrastTheme + "\" ";
@@ -117,17 +117,20 @@ namespace C4A_demo_2
             textfeld_debug_label.Text = settings;
 
             textfeld_debug_label.Text= Global.ticket.type + Global.ticket.special + Global.ticket.destination + Global.ticket.price.ToString() + Global.ticket.tarif;
-            
-            TVM.printTicket(Global.ticket.type, Global.ticket.special, Global.ticket.destination, Global.ticket.price.ToString(), Global.ticket.tarif);
+            */
+            TVMSettings ts = TVM.listenForUser();
+            invoke_Settings(ts);
+
+
             String ticketType = "Tageskarte";
             String special = "Fahrradmitnahme";
             String destination = "3 Zonen";
             String price = "7,20 €";
             String person = "für Sarah";
+            TVM.printTicket(ticketType, special, destination, price, person); 
 
             textfeld_debug_label.Text = (ticketType + special + destination + price + person);
-            //TVM.printTicket(ticketType, special, destination, price, person); 
-
+            
             //invoke_Settings(ts);
 
         }

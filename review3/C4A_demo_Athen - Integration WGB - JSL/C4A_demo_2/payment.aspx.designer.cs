@@ -211,24 +211,6 @@ namespace C4A_demo_2 {
         protected global::System.Web.UI.WebControls.Label to_label;
         
         /// <summary>
-        /// navigate_ahead-Steuerelement
-        /// </summary>
-        /// <remarks>
-        /// Automatisch generiertes Feld
-        /// Um dies zu ändern, verschieben Sie die Felddeklaration aus der Designerdatei in eine Code-Behind-Datei.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton navigate_ahead;
-        
-        /// <summary>
-        /// ahead_label-Steuerelement
-        /// </summary>
-        /// <remarks>
-        /// Automatisch generiertes Feld
-        /// Um dies zu ändern, verschieben Sie die Felddeklaration aus der Designerdatei in eine Code-Behind-Datei.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ahead_label;
-        
-        /// <summary>
         /// navigate_back-Steuerelement
         /// </summary>
         /// <remarks>
