@@ -1,0 +1,4 @@
+2015-01-22 10:46:38,301 [9] INFO C4A_demo_2._Default - Tourist
+2015-01-22 10:46:38,314 [9] INFO C4A_demo_2._Default - Tourist
+2015-01-22 10:47:04,411 [8] INFO C4A_demo_2._Default - Tourist
+2015-01-22 10:47:04,426 [8] INFO C4A_demo_2._Default - Tourist

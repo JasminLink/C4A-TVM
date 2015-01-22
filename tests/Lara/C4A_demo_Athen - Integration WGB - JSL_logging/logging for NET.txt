@@ -1,0 +1,57 @@
+---------------------------------------------------------------------------------------------------------------
+HOW TO LOG IN ASP .NET APPLICATIONS IN C#:
+---------------------------------------------------------------------------------------------------------------
+
+
+Best and most common logging mechanism is log4net.
+
+----------------------------------------------------------------------------------------------------------------
+
+1. You need an Appender to log your Data in. Best choice in most cases is a RollingFileAppender. Add the following to your web.config/app.config:
+
+<configSections>
+    <section name="log4net" type="log4net.Config.Log4NetConfigurationSectionHandler,Log4net"/>
+  </configSections>
+  
+
+  
+  <log4net>
+      <root>
+        <level value="ALL"/> //here you can chose the level of the appender. In this state, it logs everything. You could also chose: debug, info, warn, error, fatal, off.
+        <appender-ref ref="RollingFileAppender"/>
+      </root>
+    
+    <appender name="RollingFileAppender" type="log4net.Appender.RollingFileAppender">
+      <file value="C:\\logFile.txt" /> //here you should put the place, where the logFile should be put.
+      <appendToFile value="true" />
+      <rollingStyle value="Size" />
+      <maxSizeRollBackups value="5" />
+      <maximumFileSize value="10MB" />
+      <staticLogFileName value="true" />
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%date [%thread] %level %logger - %message%newline" />
+      </layout>
+    </appender>
+  
+  </log4net>
+
+------------------------------------------------------------------------------------------------------------------
+
+2. The following should be put in a method, which runs BEFORE logging starts (e.g. main, page_load,...):
+
+log4net.Config.XmlConfigurator.Configure();
+
+------------------------------------------------------------------------------------------------------------------
+
+3. The following should be put in EVERY class, which uses the logging mechanism:
+
+private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
+------------------------------------------------------------------------------------------------------------------
+
+4. Now you can log inside any method with the following lines:
+
+log.Info("logging note");
+log.debug("");
+log.warn("");
+... (see above)
