@@ -35,9 +35,9 @@ namespace C4A_demo_2
             
             tt_adult_button.Text = Global.wordingtable[34];
             tt_children_button.Text = Global.wordingtable[35];
+
+
             
-
-
 
 
             if (Global.current_theme.Contains("contrast"))
@@ -65,7 +65,11 @@ namespace C4A_demo_2
             }
 
 
-
+            if (Global.current_fontSize == "big")
+            {
+                tt_description_1.CssClass = "fliesstext_contrast";
+                ttheader.CssClass = "area_header_bigFont";
+            }
 
 
             applyFontFace(Global.current_fontface);
@@ -86,6 +90,7 @@ namespace C4A_demo_2
         {
             Global.current_language = "de";
             Global.current_fontface = "Calibri";
+            Global.current_fontSize = "default";
             Global.current_theme = "normal";
             Global.set_timeout("normal");
 

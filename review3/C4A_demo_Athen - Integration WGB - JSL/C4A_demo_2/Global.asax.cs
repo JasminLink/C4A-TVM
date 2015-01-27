@@ -21,6 +21,7 @@ namespace C4A_demo_2
         public static String current_language = "de";       // default language
         public static String current_theme = "normal";      // default theme
         public static String current_fontface = "Calibri";
+        public static String current_fontSize = "default";
 
         public static Boolean printed = false;
         

@@ -85,8 +85,10 @@ namespace C4A_demo_2
             
             // debug label for testing
             // put into Default.aspx, before footer ~line 134
-            // <div id="debug"><div id="textfeld_debug"><asp:Label runat="server" id="textfeld_debug_label" CssClass="area_header"></asp:Label></div>
-           //  textfeld_debug_label.Text = settings;
+            // <div id="debug"><div id="textfeld_debug">Debug<asp:Label runat="server" id="textfeld_debug_label" CssClass="area_header"></asp:Label></div>
+            // AND remove Redirect in ~Line 162/3
+            //textfeld_debug_label.Text = settings;
+            //textfeld_debug_label.Text = "GPII_button_Click";
 
 
             invoke_Settings(ts);
@@ -120,8 +122,11 @@ namespace C4A_demo_2
             //serverside_apply_style(Global.current_theme);
 
             //font size
-            if (ts.TVMPreferences.fontSize == "big" ){
-                //
+            Global.current_fontSize = ts.TVMPreferences.fontSize;
+            
+            if (ts.TVMPreferences.fontSize.Contains("big") ){
+                //setfontsize(36); //take care, font size is hard coded in method... !
+                applyFontSize("big");
             }else{
                 //
             }
@@ -134,7 +139,7 @@ namespace C4A_demo_2
                 Global.current_fontface = "Calibri";
             }
 
-            //button siz not in use
+            //button size not in use
             if (ts.TVMPreferences.buttonSize == "big")
             {
                 //
@@ -193,11 +198,11 @@ namespace C4A_demo_2
 
 
 
-        public void setfontsize(int size)
-        {
-            Style style = new Style();
-            style.Font.Size = 36;
-        }
+    //    public void setfontsize(int size)
+      //  {
+        //    Style style = new Style();
+          //  style.Font.Size = 36;
+       // }
 
         protected void apply_language(String language)
         {
@@ -241,6 +246,7 @@ namespace C4A_demo_2
             serverside_apply_style(Global.current_theme);
             applyFontFace(Global.current_fontface);
             applyFontFace_clientside(Global.current_fontface);
+            applyFontSize(Global.current_fontSize);
             applyLanguage(Global.current_language);
 
 
@@ -262,6 +268,31 @@ namespace C4A_demo_2
             Server.Transfer("Default.aspx");
         }
 
+        public void applyFontSize(String size)
+        {
+            display.CssClass = "startseite_C4A_contrast";
+
+
+            dest_choice.CssClass = "button_contrast";
+            freq_1_button.CssClass = "button_contrast";
+            freq_2_button.CssClass = "button_contrast";
+            freq_3_button.CssClass = "button_contrast";
+
+            DesignSwitch.CssClass = "button_eng_contrast";
+            GPII_button.CssClass = "button_eng_contrast_c4a";
+            touristbutton.CssClass = "button_hoch_contrast_touristen";
+
+            Uhr.Attributes["style"] = "font-style: bold; z-index: 2;  font-size:24px; ";
+
+            label_1.CssClass = "area_header_bigFont";
+            label_3.CssClass = "area_header_bigFont";
+            label_4.CssClass = "area_header_bigFont";
+
+            service_label.CssClass = "area_header_bigFont";
+
+
+        }
+            
         public void applyLanguage(String lang)
         {
             Global.fillWordingTable(lang);
@@ -316,9 +347,10 @@ namespace C4A_demo_2
         public void applyFontFace_clientside(String family)
         {
             String arg = "myFunction('" + family + "');";
-            ScriptManager.RegisterStartupScript(this, GetType(), "myFunction", arg, true);   
+            ScriptManager.RegisterStartupScript(this, GetType(), "myFunction", arg, true);
         }
 
+        
         public void serverside_apply_style(String theme)
         {
             
