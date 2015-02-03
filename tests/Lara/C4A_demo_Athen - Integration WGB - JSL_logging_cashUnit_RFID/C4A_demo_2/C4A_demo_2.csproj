@@ -45,6 +45,12 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FeigRFIDSO">
+      <HintPath>..\..\..\..\..\..\Program Files\Hoeft und Wessel\POS for .NET\Service Objects\FeigRFID\FeigRFIDSO.dll</HintPath>
+    </Reference>
+    <Reference Include="HoeftAndWessel.ServiceObjects.Common">
+      <HintPath>..\..\..\..\..\..\Program Files\Hoeft und Wessel\POS for .NET\Service Objects\FeigRFID\HoeftAndWessel.ServiceObjects.Common.dll</HintPath>
+    </Reference>
     <Reference Include="log4net">
       <HintPath>..\..\..\..\..\..\Program Files\Mindjet\MindManager 9\log4net.dll</HintPath>
     </Reference>
@@ -59,6 +65,14 @@
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>lib\JSON.NET\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="OBIDISC4NET, Version=4.4.0.0, Culture=neutral, PublicKeyToken=900ed37a7058e4f2, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Hoeft und Wessel\POS for .NET\Service Objects\FeigRFID\OBIDISC4NET.dll</HintPath>
+    </Reference>
+    <Reference Include="OBIDISC4NETnative, Version=0.0.0.0, Culture=neutral, PublicKeyToken=900ed37a7058e4f2, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Hoeft und Wessel\POS for .NET\Service Objects\FeigRFID\OBIDISC4NETnative.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -76,6 +90,9 @@
     <Reference Include="System.EnterpriseServices" />
     <Reference Include="System.Web.Mobile" />
     <Reference Include="System.Xml.Linq" />
+    <Reference Include="UposDevicesLib">
+      <HintPath>..\..\..\..\..\..\Program Files\Hoeft und Wessel\POS for .NET\Upos Tester\UposDevicesLib.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\flag-de.gif" />
@@ -124,6 +141,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CashUnit.cs" />
+    <Compile Include="FeigRFID.cs" />
     <Compile Include="CommandLine.cs" />
     <Compile Include="goodbye.aspx.cs">
       <DependentUpon>goodbye.aspx</DependentUpon>

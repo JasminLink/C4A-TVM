@@ -102,7 +102,10 @@ namespace C4A_demo_2
 
         protected void DesignSwitch_Click(object sender, EventArgs e)
         {
-
+            PosExplorer explorer = new PosExplorer();
+            FeigRFID rfid = new FeigRFID();
+            rfid.scanNFC();
+            log.Info("pressed");
         }
 
 
