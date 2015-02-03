@@ -46,7 +46,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="log4net">
-      <HintPath>..\..\..\..\..\Program Files\LANDesk\LDClient\log4net.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files\Mindjet\MindManager 9\log4net.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.PointOfService, Version=1.14.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>

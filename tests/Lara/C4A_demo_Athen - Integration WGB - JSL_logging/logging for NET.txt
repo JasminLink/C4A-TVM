@@ -2,8 +2,11 @@
 HOW TO LOG IN ASP .NET APPLICATIONS IN C#:
 ---------------------------------------------------------------------------------------------------------------
 
-
 Best and most common logging mechanism is log4net.
+
+---------------------------------------------------------------------------------------------------------------
+
+Make sure you include the log4net assembly in your project (You may find it here: c:\Program Files\Mindjet\MindManager9\log4net.dll)
 
 ----------------------------------------------------------------------------------------------------------------
 
@@ -17,12 +20,12 @@ Best and most common logging mechanism is log4net.
   
   <log4net>
       <root>
-        <level value="ALL"/> //here you can chose the level of the appender. In this state, it logs everything. You could also chose: debug, info, warn, error, fatal, off.
+        <level value="ALL"/> //here you can choose the level of the appender. In this state, it logs everything. You could also chose: debug, info, warn, error, fatal, off.
         <appender-ref ref="RollingFileAppender"/>
       </root>
     
     <appender name="RollingFileAppender" type="log4net.Appender.RollingFileAppender">
-      <file value="C:\\logFile.txt" /> //here you should put the place, where the logFile should be put.
+      <file value="C:\\logFile.txt" /> //here you should put the place, where the logFile should be put. Make sure you actually are ALLOWED to write in this place
       <appendToFile value="true" />
       <rollingStyle value="Size" />
       <maxSizeRollBackups value="5" />

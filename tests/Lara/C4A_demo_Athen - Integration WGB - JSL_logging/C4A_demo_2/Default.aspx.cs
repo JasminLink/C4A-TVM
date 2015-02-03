@@ -395,6 +395,7 @@ namespace C4A_demo_2
 
         protected void touristbutton_Click(object sender, EventArgs e)
         {
+            
             Response.Redirect("tourist.aspx");
         }
 
