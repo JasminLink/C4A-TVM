@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using Microsoft.PointOfService;
 
+
 namespace C4A_demo_2
 {
     public class CashUnit
@@ -36,7 +37,7 @@ namespace C4A_demo_2
     public void pay(string price)
     {
     
-    sum = (int)Single.Parse(price)*100;
+    sum = (int)(Single.Parse(price)*100);
 
     cashUnit.Open();
     log.Info("CashUnit opened");
