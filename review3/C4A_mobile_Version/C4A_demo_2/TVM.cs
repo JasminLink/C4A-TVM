@@ -8,19 +8,24 @@ namespace Demo_GPII_Adapter {
         //options for testing everything emulated
 
         //static String flowManager = TVMSettings.url_to_emulated_FlowManager;
+        static String flowManager = TVMSettings.url_to_local_cloudbased_FlowManager;
+        //static String flowManager = TVMSettings.url_to_online_FlowManager;
         //static Boolean emulateScanner = true;
+        static Boolean emulateScanner = false;
         //static Boolean emulatePrinter = true;
-        //static String printerType = TVMSettings.built_in_printer;
-
-        //options for full testing on TVM
+        static Boolean emulatePrinter = false;
+        static String printerType = TVMSettings.mobilePrinter;
+        
+        /*//options for full testing on TVM
         static String flowManager = TVMSettings.url_to_local_cloudbased_FlowManager;
         static Boolean emulateScanner = false;
         static Boolean emulatePrinter = false;
         static String printerType = TVMSettings.built_in_printer;
+        */
 
         //static String flowManager = TVMSettings.url_to_emulated_FlowManager;
         //static String flowManager = TVMSettings.url_to_local_cloudbased_FlowManager;
-        //static String flowManager = TVMSettings.url_online_FlowManager;
+        //static String flowManager = TVMSettings.url_to_online_FlowManager;
 
         //static Boolean emulateScanner = true;
         //static Boolean emulateScanner = false;
