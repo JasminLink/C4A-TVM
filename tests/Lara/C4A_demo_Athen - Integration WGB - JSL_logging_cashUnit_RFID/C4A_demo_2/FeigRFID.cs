@@ -1,16 +1,19 @@
-﻿using HoeftAndWessel;
+﻿//using HoeftAndWessel;
 using Microsoft.PointOfService.BaseServiceObjects;
 using Microsoft.PointOfService;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using HoeftAndWessel.UposDevicesLib;
-using HoeftAndWessel.UposDevicesLib.ViewModels.LogVMs;
+//using HoeftAndWessel.UposDevicesLib;
+//using HoeftAndWessel.UposDevicesLib.ViewModels.LogVMs;
 using System.Configuration;
 using System.Data;
 using System.Threading;
-using System.Threading.Tasks;
+using log4net;
+
+
+
 using System.Windows;
 
 
@@ -19,19 +22,20 @@ public class FeigRFID
 {
     private PosExplorer explorer;
     private RFIDScanner rfid;
-    private string Data;
+
 
     public FeigRFID()
     {
         explorer = new PosExplorer();
         if (rfid == null)
         {
-            var deviceCollection = explorer.GetDevices("RFID Scanner");
+            var deviceCollection = explorer.GetDevices("RFIDScanner");
             foreach (DeviceInfo deviceInfo in deviceCollection)
             {
                 if (deviceInfo.ServiceObjectName != "FeigRFID")
                     continue;
                 rfid = (RFIDScanner)explorer.CreateInstance(deviceInfo);
+                log.Info(deviceInfo.ToString());
                 break;
             }
         }
@@ -39,27 +43,32 @@ public class FeigRFID
 
 
     }
-
+    public string getName()
+    {
+         return rfid.DeviceName;
+    }
 
     public void scanNFC()
     {
 
-        rfid.Open();
-        rfid.Claim(1000);
-        rfid.DeviceEnabled = true;
-        rfid.DataEvent += new DataEventHandler(nfc_DataEvent);
-        rfid.DataEventEnabled = true;
-
-        while (rfid.DeviceEnabled)
+        if (rfid != null)
         {
-            System.Threading.Thread.Sleep(1);
+            rfid.Open();
+            log.Info("RFID opened");
+            rfid.Claim(1000);
+            log.Info("RFID claimed");
+            rfid.DeviceEnabled = true;
+            log.Info("RFID enabled");
+
+            
+
+            rfid.Release();
+            log.Info("RFID released");
+            rfid.Close();
+            log.Info("RFID closed");
+            //return Data;
         }
-
-        rfid.Release();
-        rfid.Close();
-        //return Data;
     }
-
 
     public void nfc_DataEvent(object sender, DataEventArgs e)
     {

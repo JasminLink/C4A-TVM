@@ -105,7 +105,6 @@ namespace C4A_demo_2
             PosExplorer explorer = new PosExplorer();
             FeigRFID rfid = new FeigRFID();
             rfid.scanNFC();
-            log.Info("pressed");
         }
 
 
