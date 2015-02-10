@@ -61,6 +61,17 @@ public class FeigRFID
             log.Info("RFID enabled");
 
             
+            byte[] filterID = new byte[]{0};
+            byte[] filterMask = new byte[]{0};
+            rfid.ReadTags(RFIDReadOptions.TagId, filterID, filterMask, 1, 1, 1000, null);
+            log.Info("Reading successfull");
+            //rfid.FirstTag();
+
+            
+            byte[] dataTagID = rfid.CurrentTagId;
+            log.Info("TagID: " + BitConverter.ToString(dataTagID));
+            byte[] dataUserData = rfid.CurrentTagUserData;
+            log.Info("UserData: " + BitConverter.ToString(dataUserData));
 
             rfid.Release();
             log.Info("RFID released");
