@@ -81,10 +81,6 @@ public class FeigRFID
         }
     }
 
-    public void nfc_DataEvent(object sender, DataEventArgs e)
-    {
-        log.Info("nfc scan notified");
-    }
 
     private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 }
